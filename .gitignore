@@ -1,0 +1,5 @@
+*/*.swp
+
+phidgets_drivers
+
+**/__pycache__/
