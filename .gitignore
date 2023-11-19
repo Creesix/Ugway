@@ -1,5 +1,8 @@
 */*.swp
 
-phidgets_drivers
+build/
+install/
+log/
+.vscode
 
 **/__pycache__/
