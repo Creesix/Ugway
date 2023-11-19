@@ -1,0 +1,8 @@
+src/bridgepackets.gen.lo: \
+ /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/bridgepackets.gen.c \
+ /usr/include/stdc-predef.h \
+ /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/bridgepackets.gen.h \
+ /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/constantsinternal.h
+/usr/include/stdc-predef.h:
+/home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/bridgepackets.gen.h:
+/home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/constantsinternal.h:

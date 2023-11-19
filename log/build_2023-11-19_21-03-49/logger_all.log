@@ -1,0 +1,555 @@
+[0.666s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.666s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f8d6a3c7c70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f8d6a3c6560>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f8d6a3c6560>>)
+[0.703s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.704s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.704s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.704s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.704s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.704s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.704s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/remi/ugway_ws'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extension 'ignore_ament_install'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extensions ['colcon_pkg']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extension 'colcon_pkg'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extensions ['colcon_meta']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extension 'colcon_meta'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extensions ['ros']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_odo_pkg) by extension 'ros'
+[0.717s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nav_odo_pkg' with type 'ros.ament_python' and name 'nav_odo_pkg'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extension 'ignore'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extension 'ignore_ament_install'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extensions ['colcon_pkg']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extension 'colcon_pkg'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extensions ['colcon_meta']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extension 'colcon_meta'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extensions ['ros']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidget_stepper_controllers) by extension 'ros'
+[0.718s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidget_stepper_controllers' with type 'ros.ament_python' and name 'phidget_stepper_controllers'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'ignore'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'ignore_ament_install'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extensions ['colcon_pkg']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'colcon_pkg'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extensions ['colcon_meta']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'colcon_meta'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extensions ['ros']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'ros'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extensions ['cmake', 'python']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'cmake'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'python'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extensions ['python_setup_py']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers) by extension 'python_setup_py'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extensions ['ignore', 'ignore_ament_install']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extension 'ignore'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extension 'ignore_ament_install'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extensions ['colcon_pkg']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extension 'colcon_pkg'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extensions ['colcon_meta']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extension 'colcon_meta'
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extensions ['ros']
+[0.719s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/libphidget22) by extension 'ros'
+[0.720s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/libphidget22' with type 'ros.ament_cmake' and name 'libphidget22'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extensions ['ignore', 'ignore_ament_install']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extension 'ignore'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extension 'ignore_ament_install'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extensions ['colcon_pkg']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extension 'colcon_pkg'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extensions ['colcon_meta']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extension 'colcon_meta'
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extensions ['ros']
+[0.720s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_accelerometer) by extension 'ros'
+[0.720s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_accelerometer' with type 'ros.ament_cmake' and name 'phidgets_accelerometer'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extensions ['ignore', 'ignore_ament_install']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extension 'ignore'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extension 'ignore_ament_install'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extensions ['colcon_pkg']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extension 'colcon_pkg'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extensions ['colcon_meta']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extension 'colcon_meta'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extensions ['ros']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_inputs) by extension 'ros'
+[0.721s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_analog_inputs' with type 'ros.ament_cmake' and name 'phidgets_analog_inputs'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extensions ['ignore', 'ignore_ament_install']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extension 'ignore'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extension 'ignore_ament_install'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extensions ['colcon_pkg']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extension 'colcon_pkg'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extensions ['colcon_meta']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extension 'colcon_meta'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extensions ['ros']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_analog_outputs) by extension 'ros'
+[0.722s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_analog_outputs' with type 'ros.ament_cmake' and name 'phidgets_analog_outputs'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extensions ['ignore', 'ignore_ament_install']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extension 'ignore'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extension 'ignore_ament_install'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extensions ['colcon_pkg']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extension 'colcon_pkg'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extensions ['colcon_meta']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extension 'colcon_meta'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extensions ['ros']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_api) by extension 'ros'
+[0.723s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_api' with type 'ros.ament_cmake' and name 'phidgets_api'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extensions ['ignore', 'ignore_ament_install']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extension 'ignore'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extension 'ignore_ament_install'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extensions ['colcon_pkg']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extension 'colcon_pkg'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extensions ['colcon_meta']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extension 'colcon_meta'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extensions ['ros']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_inputs) by extension 'ros'
+[0.724s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_digital_inputs' with type 'ros.ament_cmake' and name 'phidgets_digital_inputs'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extensions ['ignore', 'ignore_ament_install']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extension 'ignore'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extension 'ignore_ament_install'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extensions ['colcon_pkg']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extension 'colcon_pkg'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extensions ['colcon_meta']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extension 'colcon_meta'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extensions ['ros']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_digital_outputs) by extension 'ros'
+[0.725s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_digital_outputs' with type 'ros.ament_cmake' and name 'phidgets_digital_outputs'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extension 'ignore'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extension 'ignore_ament_install'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extensions ['colcon_pkg']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extension 'colcon_pkg'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extensions ['colcon_meta']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extension 'colcon_meta'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extensions ['ros']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_drivers) by extension 'ros'
+[0.725s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_drivers' with type 'ros.ament_cmake' and name 'phidgets_drivers'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extension 'ignore_ament_install'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extensions ['colcon_pkg']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extension 'colcon_pkg'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extensions ['colcon_meta']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extension 'colcon_meta'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extensions ['ros']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_gyroscope) by extension 'ros'
+[0.726s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_gyroscope' with type 'ros.ament_cmake' and name 'phidgets_gyroscope'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extension 'ignore_ament_install'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extensions ['colcon_pkg']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extension 'colcon_pkg'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extensions ['colcon_meta']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extension 'colcon_meta'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extensions ['ros']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_high_speed_encoder) by extension 'ros'
+[0.727s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_high_speed_encoder' with type 'ros.ament_cmake' and name 'phidgets_high_speed_encoder'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extension 'ignore_ament_install'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extensions ['colcon_pkg']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extension 'colcon_pkg'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extensions ['colcon_meta']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extension 'colcon_meta'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extensions ['ros']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_ik) by extension 'ros'
+[0.728s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_ik' with type 'ros.ament_cmake' and name 'phidgets_ik'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extensions ['ignore', 'ignore_ament_install']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extension 'ignore'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extension 'ignore_ament_install'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extensions ['colcon_pkg']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extension 'colcon_pkg'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extensions ['colcon_meta']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extension 'colcon_meta'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extensions ['ros']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_magnetometer) by extension 'ros'
+[0.729s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_magnetometer' with type 'ros.ament_cmake' and name 'phidgets_magnetometer'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extensions ['ignore', 'ignore_ament_install']
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extension 'ignore'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extension 'ignore_ament_install'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extensions ['colcon_pkg']
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extension 'colcon_pkg'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extensions ['colcon_meta']
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extension 'colcon_meta'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extensions ['ros']
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_motors) by extension 'ros'
+[0.730s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_motors' with type 'ros.ament_cmake' and name 'phidgets_motors'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extension 'ignore'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extension 'ignore_ament_install'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extensions ['colcon_pkg']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extension 'colcon_pkg'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extensions ['colcon_meta']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extension 'colcon_meta'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extensions ['ros']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_msgs) by extension 'ros'
+[0.730s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_msgs' with type 'ros.ament_cmake' and name 'phidgets_msgs'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extensions ['ignore', 'ignore_ament_install']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extension 'ignore'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extension 'ignore_ament_install'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extensions ['colcon_pkg']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extension 'colcon_pkg'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extensions ['colcon_meta']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extension 'colcon_meta'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extensions ['ros']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_spatial) by extension 'ros'
+[0.731s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_spatial' with type 'ros.ament_cmake' and name 'phidgets_spatial'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extensions ['ignore', 'ignore_ament_install']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extension 'ignore'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extension 'ignore_ament_install'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extensions ['colcon_pkg']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extension 'colcon_pkg'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extensions ['colcon_meta']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extension 'colcon_meta'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extensions ['ros']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/phidgets_drivers/phidgets_temperature) by extension 'ros'
+[0.732s] DEBUG:colcon.colcon_core.package_identification:Package 'src/phidgets_drivers/phidgets_temperature' with type 'ros.ament_cmake' and name 'phidgets_temperature'
+[0.732s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.732s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.732s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.732s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.732s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.794s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.794s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.813s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.814s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'cmake_args' from command line to 'None'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'cmake_target' from command line to 'None'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'cmake_clean_cache' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'cmake_clean_first' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'cmake_force_configure' from command line to 'False'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'ament_cmake_args' from command line to 'None'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'catkin_cmake_args' from command line to 'None'
+[0.872s] Level 5:colcon.colcon_core.verb:set package 'libphidget22' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.872s] DEBUG:colcon.colcon_core.verb:Building package 'libphidget22' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/libphidget22', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/libphidget22', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/libphidget22', 'symlink_install': False, 'test_result_base': None}
+[0.880s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'cmake_args' from command line to 'None'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'cmake_target' from command line to 'None'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.881s] Level 5:colcon.colcon_core.verb:set package 'nav_odo_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.881s] DEBUG:colcon.colcon_core.verb:Building package 'nav_odo_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/nav_odo_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/nav_odo_pkg', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/nav_odo_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'cmake_args' from command line to 'None'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'cmake_target' from command line to 'None'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'phidgets_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.889s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_msgs', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'cmake_args' from command line to 'None'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'cmake_target' from command line to 'None'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'cmake_clean_cache' from command line to 'False'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'cmake_clean_first' from command line to 'False'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'cmake_force_configure' from command line to 'False'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'ament_cmake_args' from command line to 'None'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'catkin_cmake_args' from command line to 'None'
+[0.898s] Level 5:colcon.colcon_core.verb:set package 'phidgets_api' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.898s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_api' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_api', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_api', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_api', 'symlink_install': False, 'test_result_base': None}
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'cmake_args' from command line to 'None'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'cmake_target' from command line to 'None'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'cmake_clean_cache' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'cmake_clean_first' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'cmake_force_configure' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'ament_cmake_args' from command line to 'None'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'catkin_cmake_args' from command line to 'None'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'phidget_stepper_controllers' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.907s] DEBUG:colcon.colcon_core.verb:Building package 'phidget_stepper_controllers' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidget_stepper_controllers', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidget_stepper_controllers', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidget_stepper_controllers', 'symlink_install': False, 'test_result_base': None}
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'cmake_args' from command line to 'None'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'cmake_target' from command line to 'None'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'cmake_clean_first' from command line to 'False'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'cmake_force_configure' from command line to 'False'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'ament_cmake_args' from command line to 'None'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'phidgets_accelerometer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.922s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_accelerometer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_accelerometer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_accelerometer', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_accelerometer', 'symlink_install': False, 'test_result_base': None}
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'cmake_args' from command line to 'None'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'cmake_target' from command line to 'None'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'cmake_clean_first' from command line to 'False'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'cmake_force_configure' from command line to 'False'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'ament_cmake_args' from command line to 'None'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.931s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_inputs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.931s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_analog_inputs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_analog_inputs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_analog_inputs', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_analog_inputs', 'symlink_install': False, 'test_result_base': None}
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'cmake_args' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'cmake_target' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'cmake_clean_first' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'cmake_force_configure' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'ament_cmake_args' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'phidgets_analog_outputs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.940s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_analog_outputs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_analog_outputs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_analog_outputs', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_analog_outputs', 'symlink_install': False, 'test_result_base': None}
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'cmake_args' from command line to 'None'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'cmake_target' from command line to 'None'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'cmake_clean_first' from command line to 'False'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'cmake_force_configure' from command line to 'False'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'ament_cmake_args' from command line to 'None'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_inputs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.949s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_digital_inputs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_digital_inputs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_digital_inputs', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_digital_inputs', 'symlink_install': False, 'test_result_base': None}
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'cmake_args' from command line to 'None'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'cmake_target' from command line to 'None'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'cmake_clean_first' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'cmake_force_configure' from command line to 'False'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'ament_cmake_args' from command line to 'None'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.957s] Level 5:colcon.colcon_core.verb:set package 'phidgets_digital_outputs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.957s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_digital_outputs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_digital_outputs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_digital_outputs', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_digital_outputs', 'symlink_install': False, 'test_result_base': None}
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'cmake_args' from command line to 'None'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'cmake_target' from command line to 'None'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'cmake_clean_cache' from command line to 'False'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'cmake_clean_first' from command line to 'False'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'cmake_force_configure' from command line to 'False'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'ament_cmake_args' from command line to 'None'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'catkin_cmake_args' from command line to 'None'
+[0.966s] Level 5:colcon.colcon_core.verb:set package 'phidgets_gyroscope' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.966s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_gyroscope' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_gyroscope', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_gyroscope', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_gyroscope', 'symlink_install': False, 'test_result_base': None}
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'cmake_args' from command line to 'None'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'cmake_target' from command line to 'None'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'cmake_clean_cache' from command line to 'False'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'cmake_clean_first' from command line to 'False'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'cmake_force_configure' from command line to 'False'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'ament_cmake_args' from command line to 'None'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'catkin_cmake_args' from command line to 'None'
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'phidgets_high_speed_encoder' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.975s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_high_speed_encoder' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_high_speed_encoder', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_high_speed_encoder', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_high_speed_encoder', 'symlink_install': False, 'test_result_base': None}
+[0.983s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'cmake_args' from command line to 'None'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'cmake_target' from command line to 'None'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'cmake_clean_first' from command line to 'False'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'cmake_force_configure' from command line to 'False'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'ament_cmake_args' from command line to 'None'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.984s] Level 5:colcon.colcon_core.verb:set package 'phidgets_magnetometer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.984s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_magnetometer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_magnetometer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_magnetometer', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_magnetometer', 'symlink_install': False, 'test_result_base': None}
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'cmake_args' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'cmake_target' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'cmake_clean_cache' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'cmake_clean_first' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'cmake_force_configure' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'ament_cmake_args' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'catkin_cmake_args' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'phidgets_motors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.992s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_motors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_motors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_motors', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_motors', 'symlink_install': False, 'test_result_base': None}
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'cmake_args' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'cmake_target' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'cmake_clean_cache' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'cmake_clean_first' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'cmake_force_configure' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'ament_cmake_args' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'catkin_cmake_args' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'phidgets_spatial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.001s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_spatial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_spatial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_spatial', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_spatial', 'symlink_install': False, 'test_result_base': None}
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'cmake_args' from command line to 'None'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'cmake_target' from command line to 'None'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'cmake_clean_cache' from command line to 'False'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'cmake_clean_first' from command line to 'False'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'cmake_force_configure' from command line to 'False'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'ament_cmake_args' from command line to 'None'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'catkin_cmake_args' from command line to 'None'
+[1.009s] Level 5:colcon.colcon_core.verb:set package 'phidgets_temperature' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.009s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_temperature' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_temperature', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_temperature', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_temperature', 'symlink_install': False, 'test_result_base': None}
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'cmake_args' from command line to 'None'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'cmake_target' from command line to 'None'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'cmake_clean_cache' from command line to 'False'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'cmake_clean_first' from command line to 'False'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'cmake_force_configure' from command line to 'False'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'ament_cmake_args' from command line to 'None'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'catkin_cmake_args' from command line to 'None'
+[1.018s] Level 5:colcon.colcon_core.verb:set package 'phidgets_ik' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.018s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_ik' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_ik', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_ik', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_ik', 'symlink_install': False, 'test_result_base': None}
+[1.026s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'cmake_args' from command line to 'None'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'cmake_target' from command line to 'None'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'cmake_clean_cache' from command line to 'False'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'cmake_clean_first' from command line to 'False'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'cmake_force_configure' from command line to 'False'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'ament_cmake_args' from command line to 'None'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'catkin_cmake_args' from command line to 'None'
+[1.027s] Level 5:colcon.colcon_core.verb:set package 'phidgets_drivers' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.027s] DEBUG:colcon.colcon_core.verb:Building package 'phidgets_drivers' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/remi/ugway_ws/build/phidgets_drivers', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/remi/ugway_ws/install/phidgets_drivers', 'merge_install': False, 'path': '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_drivers', 'symlink_install': False, 'test_result_base': None}
+[1.035s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.044s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/remi/ugway_ws/src/phidgets_drivers/libphidget22' with build type 'ament_cmake'
+[1.044s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/remi/ugway_ws/src/phidgets_drivers/libphidget22'
+[1.060s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.060s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.060s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.078s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs' with build type 'ament_cmake'
+[1.079s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs'
+[1.087s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.087s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.106s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/remi/ugway_ws/src/nav_odo_pkg' with build type 'ament_python'
+[1.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_odo_pkg', 'ament_prefix_path')
+[1.114s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/hook/ament_prefix_path.ps1'
+[1.115s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/hook/ament_prefix_path.dsv'
+[1.115s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/hook/ament_prefix_path.sh'
+[1.124s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.124s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.144s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/remi/ugway_ws/build/libphidget22': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/libphidget22 -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/libphidget22
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/remi/ugway_ws/build/phidgets_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_msgs
+[1.325s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/remi/ugway_ws/src/nav_odo_pkg'
+[1.337s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.337s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.528s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/remi/ugway_ws/build/libphidget22' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/libphidget22 -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/libphidget22
+[1.529s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/remi/ugway_ws/build/libphidget22': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/libphidget22 -- -j16 -l16
+[1.604s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/remi/ugway_ws/src/nav_odo_pkg': PYTHONPATH=/home/remi/ugway_ws/build/nav_odo_pkg/prefix_override:/home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav_odo_pkg build --build-base /home/remi/ugway_ws/build/nav_odo_pkg/build install --record /home/remi/ugway_ws/build/nav_odo_pkg/install.log --single-version-externally-managed
+[1.797s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/remi/ugway_ws/src/nav_odo_pkg' returned '0': PYTHONPATH=/home/remi/ugway_ws/build/nav_odo_pkg/prefix_override:/home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav_odo_pkg build --build-base /home/remi/ugway_ws/build/nav_odo_pkg/build install --record /home/remi/ugway_ws/build/nav_odo_pkg/install.log --single-version-externally-managed
+[1.808s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/nav_odo_pkg' for CMake module files
+[1.809s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/nav_odo_pkg' for CMake config files
+[1.809s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/nav_odo_pkg/lib'
+[1.809s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/nav_odo_pkg/bin'
+[1.809s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/nav_odo_pkg/lib/pkgconfig/nav_odo_pkg.pc'
+[1.809s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages'
+[1.809s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_odo_pkg', 'pythonpath')
+[1.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/hook/pythonpath.ps1'
+[1.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/hook/pythonpath.dsv'
+[1.819s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/hook/pythonpath.sh'
+[1.819s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/nav_odo_pkg/bin'
+[1.819s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_odo_pkg)
+[1.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/package.ps1'
+[1.829s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/package.dsv'
+[1.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/package.sh'
+[1.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/package.bash'
+[1.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg/package.zsh'
+[1.831s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/remi/ugway_ws/install/nav_odo_pkg/share/colcon-core/packages/nav_odo_pkg)
+[2.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/remi/ugway_ws/build/phidgets_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_msgs
+[2.042s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/remi/ugway_ws/build/phidgets_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_msgs -- -j16 -l16
+[3.978s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/remi/ugway_ws/build/phidgets_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_msgs -- -j16 -l16
+[4.032s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/remi/ugway_ws/build/phidgets_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_msgs
+[4.076s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(phidgets_msgs)
+[4.076s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/remi/ugway_ws/build/phidgets_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_msgs
+[4.086s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs' for CMake module files
+[4.086s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs' for CMake config files
+[4.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('phidgets_msgs', 'cmake_prefix_path')
+[4.095s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/cmake_prefix_path.ps1'
+[4.096s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/cmake_prefix_path.dsv'
+[4.096s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/cmake_prefix_path.sh'
+[4.096s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/lib'
+[4.096s] Level 1:colcon.colcon_core.shell:create_environment_hook('phidgets_msgs', 'ld_library_path_lib')
+[4.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/ld_library_path_lib.ps1'
+[4.105s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/ld_library_path_lib.dsv'
+[4.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/ld_library_path_lib.sh'
+[4.105s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/bin'
+[4.105s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/lib/pkgconfig/phidgets_msgs.pc'
+[4.105s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/lib/python3.10/site-packages'
+[4.106s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/bin'
+[4.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.ps1'
+[4.115s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.dsv'
+[4.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.sh'
+[4.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.bash'
+[4.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.zsh'
+[4.115s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/remi/ugway_ws/install/phidgets_msgs/share/colcon-core/packages/phidgets_msgs)
+[4.174s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(phidgets_msgs)
+[4.183s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs' for CMake module files
+[4.183s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs' for CMake config files
+[4.184s] Level 1:colcon.colcon_core.shell:create_environment_hook('phidgets_msgs', 'cmake_prefix_path')
+[4.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/cmake_prefix_path.ps1'
+[4.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/cmake_prefix_path.dsv'
+[4.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/cmake_prefix_path.sh'
+[4.193s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/lib'
+[4.193s] Level 1:colcon.colcon_core.shell:create_environment_hook('phidgets_msgs', 'ld_library_path_lib')
+[4.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/ld_library_path_lib.ps1'
+[4.203s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/ld_library_path_lib.dsv'
+[4.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/hook/ld_library_path_lib.sh'
+[4.203s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/bin'
+[4.203s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/lib/pkgconfig/phidgets_msgs.pc'
+[4.203s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/lib/python3.10/site-packages'
+[4.203s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/phidgets_msgs/bin'
+[4.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.ps1'
+[4.213s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.dsv'
+[4.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.sh'
+[4.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.bash'
+[4.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/package.zsh'
+[4.214s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/remi/ugway_ws/install/phidgets_msgs/share/colcon-core/packages/phidgets_msgs)
+[27.985s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/remi/ugway_ws/build/libphidget22' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/libphidget22 -- -j16 -l16
+[28.004s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(libphidget22)
+[28.013s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/libphidget22' for CMake module files
+[28.013s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/libphidget22' for CMake config files
+[28.013s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/libphidget22/bin'
+[28.013s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/libphidget22/lib/pkgconfig/libphidget22.pc'
+[28.013s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/libphidget22/lib/python3.10/site-packages'
+[28.013s] Level 1:colcon.colcon_core.environment:checking '/home/remi/ugway_ws/install/libphidget22/bin'
+[28.022s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/libphidget22/share/libphidget22/package.ps1'
+[28.023s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/remi/ugway_ws/install/libphidget22/share/libphidget22/package.dsv'
+[28.023s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/libphidget22/share/libphidget22/package.sh'
+[28.023s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/libphidget22/share/libphidget22/package.bash'
+[28.024s] INFO:colcon.colcon_core.shell:Creating package script '/home/remi/ugway_ws/install/libphidget22/share/libphidget22/package.zsh'
+[28.024s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/remi/ugway_ws/install/libphidget22/share/colcon-core/packages/libphidget22)
+[28.034s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[28.034s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[28.034s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[28.035s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[28.048s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[28.048s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[28.048s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[28.062s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[28.071s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/remi/ugway_ws/install/local_setup.ps1'
+[28.072s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/remi/ugway_ws/install/_local_setup_util_ps1.py'
+[28.073s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/remi/ugway_ws/install/setup.ps1'
+[28.082s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/remi/ugway_ws/install/local_setup.sh'
+[28.082s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/remi/ugway_ws/install/_local_setup_util_sh.py'
+[28.083s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/remi/ugway_ws/install/setup.sh'
+[28.091s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/remi/ugway_ws/install/local_setup.bash'
+[28.092s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/remi/ugway_ws/install/setup.bash'
+[28.101s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/remi/ugway_ws/install/local_setup.zsh'
+[28.102s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/remi/ugway_ws/install/setup.zsh'

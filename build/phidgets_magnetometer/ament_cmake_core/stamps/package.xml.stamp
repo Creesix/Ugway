@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>phidgets_magnetometer</name>
+  <version>2.3.1</version>
+  <description>Driver for the Phidgets Magnetometer devices</description>
+
+  <maintainer email="martin.guenther@dfki.de">Martin Günther</maintainer>
+  <maintainer email="clalancette@openrobotics.org">Chris Lalancette</maintainer>
+
+  <license>BSD</license>
+
+  <author>Chris Lalancette</author>
+
+  <buildtool_depend>ament_cmake_ros</buildtool_depend>
+
+  <depend>phidgets_api</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>sensor_msgs</depend>
+
+  <exec_depend>launch</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

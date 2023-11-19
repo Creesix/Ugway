@@ -1,0 +1,4 @@
+# Sets the state of a digital output.
+
+uint16 index   # index of the output to be set
+bool state

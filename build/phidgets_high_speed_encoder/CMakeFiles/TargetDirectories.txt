@@ -1,0 +1,10 @@
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/uninstall.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_uninstall.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/test.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/edit_cache.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/rebuild_cache.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/list_install_components.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/install.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/install/local.dir
+/home/remi/ugway_ws/build/phidgets_high_speed_encoder/CMakeFiles/install/strip.dir

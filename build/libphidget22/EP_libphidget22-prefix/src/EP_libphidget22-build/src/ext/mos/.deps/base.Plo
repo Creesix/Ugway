@@ -1,0 +1,4 @@
+src/ext/mos/base.lo: \
+ /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/base.c \
+ /usr/include/stdc-predef.h
+/usr/include/stdc-predef.h:

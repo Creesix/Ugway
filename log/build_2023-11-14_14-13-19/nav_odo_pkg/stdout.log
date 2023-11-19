@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/requires.txt
+writing top-level names to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/top_level.txt
+reading manifest file '../../build/nav_odo_pkg/nav_odo_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/nav_odo_pkg/nav_odo_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying package.xml -> /home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg
+running install_egg_info
+removing '/home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages/nav_odo_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/nav_odo_pkg/nav_odo_pkg.egg-info to /home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages/nav_odo_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/remi/ugway_ws/build/nav_odo_pkg/install.log'

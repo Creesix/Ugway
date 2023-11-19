@@ -1,0 +1,4 @@
+source;share/libphidget22/local_setup.bash
+source;share/libphidget22/local_setup.dsv
+source;share/libphidget22/local_setup.sh
+source;share/libphidget22/local_setup.zsh

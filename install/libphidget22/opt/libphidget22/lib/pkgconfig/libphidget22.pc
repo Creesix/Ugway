@@ -1,0 +1,10 @@
+prefix=/home/remi/ugway_ws/build/libphidget22/libphidget22_install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libphidget22
+Description: Phidgets library
+Version: 1.13.20230224
+Libs: -L${libdir} -lphidget22
+Cflags: -I${includedir}

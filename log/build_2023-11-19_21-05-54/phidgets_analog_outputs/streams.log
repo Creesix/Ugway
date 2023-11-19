@@ -1,0 +1,67 @@
+[0.056s] Invoking command in '/home/remi/ugway_ws/build/phidgets_analog_outputs': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/phidgets_msgs/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/remi/ugway_ws/install/phidgets_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_analog_outputs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_analog_outputs
+[1.641s] -- The C compiler identification is GNU 11.4.0
+[1.641s] -- The CXX compiler identification is GNU 11.4.0
+[1.641s] -- Detecting C compiler ABI info
+[1.641s] -- Detecting C compiler ABI info - done
+[1.641s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.641s] -- Detecting C compile features
+[1.641s] -- Detecting C compile features - done
+[1.642s] -- Detecting CXX compiler ABI info
+[1.642s] -- Detecting CXX compiler ABI info - done
+[1.642s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.642s] -- Detecting CXX compile features
+[1.642s] -- Detecting CXX compile features - done
+[1.642s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.642s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.642s] -- Found phidgets_api: 2.3.1 (/home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake)
+[1.642s] -- Found phidgets_msgs: 2.3.1 (/home/remi/ugway_ws/install/phidgets_msgs/share/phidgets_msgs/cmake)
+[1.642s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.642s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.643s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.643s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.643s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.643s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[1.643s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.643s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.643s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.643s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.643s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.643s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.643s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.643s] -- Found Threads: TRUE  
+[1.714s] -- Found rclcpp_components: 16.0.6 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.872s] -- Configuring done
+[1.889s] -- Generating done
+[1.891s] -- Build files have been written to: /home/remi/ugway_ws/build/phidgets_analog_outputs
+[1.905s] Invoked command in '/home/remi/ugway_ws/build/phidgets_analog_outputs' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/phidgets_msgs/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/remi/ugway_ws/install/phidgets_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_analog_outputs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_analog_outputs
+[1.908s] Invoking command in '/home/remi/ugway_ws/build/phidgets_analog_outputs': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/phidgets_msgs/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/remi/ugway_ws/install/phidgets_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_analog_outputs -- -j16 -l16
+[1.936s] [ 50%] [32mBuilding CXX object CMakeFiles/phidgets_analog_outputs.dir/src/analog_outputs_ros_i.cpp.o[0m
+[10.629s] [100%] [32m[1mLinking CXX shared library libphidgets_analog_outputs.so[0m
+[10.981s] [100%] Built target phidgets_analog_outputs
+[10.985s] Invoked command in '/home/remi/ugway_ws/build/phidgets_analog_outputs' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/phidgets_msgs/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/remi/ugway_ws/install/phidgets_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_analog_outputs -- -j16 -l16
+[10.999s] Invoking command in '/home/remi/ugway_ws/build/phidgets_analog_outputs': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/phidgets_msgs/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/remi/ugway_ws/install/phidgets_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_analog_outputs
+[11.002s] -- Install configuration: ""
+[11.002s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/lib/libphidgets_analog_outputs.so
+[11.007s] -- Set runtime path of "/home/remi/ugway_ws/install/phidgets_analog_outputs/lib/libphidgets_analog_outputs.so" to ""
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/include
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/include/phidgets_analog_outputs
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/include/phidgets_analog_outputs/analog_outputs_ros_i.hpp
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/launch
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/launch/analog_outputs-launch.py
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/ament_index/resource_index/package_run_dependencies/phidgets_analog_outputs
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/ament_index/resource_index/parent_prefix_path/phidgets_analog_outputs
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/environment/ament_prefix_path.sh
+[11.007s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/environment/ament_prefix_path.dsv
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/environment/path.sh
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/environment/path.dsv
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/local_setup.bash
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/local_setup.sh
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/local_setup.zsh
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/local_setup.dsv
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/package.dsv
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/ament_index/resource_index/packages/phidgets_analog_outputs
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/ament_index/resource_index/rclcpp_components/phidgets_analog_outputs
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/cmake/phidgets_analog_outputsConfig.cmake
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/cmake/phidgets_analog_outputsConfig-version.cmake
+[11.008s] -- Installing: /home/remi/ugway_ws/install/phidgets_analog_outputs/share/phidgets_analog_outputs/package.xml
+[11.009s] Invoked command in '/home/remi/ugway_ws/build/phidgets_analog_outputs' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/phidgets_msgs:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/phidgets_msgs/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/remi/ugway_ws/install/phidgets_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_analog_outputs

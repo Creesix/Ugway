@@ -1,0 +1,5 @@
+wheelRadius: 4.06    # en cm, ancien = 3.6539600
+pasStepper: 1.8 # degrés par step
+ticsPerStep: 32 # de combien augmente le compteur (du moteur) de position phidget par steps
+stepper: 4   # stepper phidget
+hub : 627520  # serial number du hub

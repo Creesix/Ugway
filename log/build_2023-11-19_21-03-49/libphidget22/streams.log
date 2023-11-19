@@ -1,0 +1,78 @@
+[0.099s] Invoking command in '/home/remi/ugway_ws/build/libphidget22': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/libphidget22 -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/libphidget22
+[0.115s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.334s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.406s] [33mCMake Warning (dev) at /usr/share/cmake-3.25/Modules/ExternalProject.cmake:3075 (message):
+[0.406s]   The DOWNLOAD_EXTRACT_TIMESTAMP option was not given and policy CMP0135 is
+[0.406s]   not set.  The policy's OLD behavior will be used.  When using a URL
+[0.406s]   download, the timestamps of extracted files should preferably be that of
+[0.406s]   the time of extraction, otherwise code that depends on the extracted
+[0.406s]   contents might not be rebuilt if the URL changes.  The OLD behavior
+[0.406s]   preserves the timestamps from the archive instead, but this is usually not
+[0.406s]   what you want.  Update your project to the NEW behavior or specify the
+[0.406s]   DOWNLOAD_EXTRACT_TIMESTAMP option with a value of true to avoid this
+[0.406s]   robustness issue.
+[0.406s] Call Stack (most recent call first):
+[0.406s]   /usr/share/cmake-3.25/Modules/ExternalProject.cmake:4185 (_ep_add_download_command)
+[0.406s]   CMakeLists.txt:9 (ExternalProject_Add)
+[0.406s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.406s] [0m
+[0.475s] -- Configuring done
+[0.480s] -- Generating done
+[0.481s] -- Build files have been written to: /home/remi/ugway_ws/build/libphidget22
+[0.483s] Invoked command in '/home/remi/ugway_ws/build/libphidget22' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/libphidget22 -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/libphidget22
+[0.485s] Invoking command in '/home/remi/ugway_ws/build/libphidget22': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/libphidget22 -- -j16 -l16
+[0.500s] [ 12%] [34m[1mCreating directories for 'EP_libphidget22'[0m
+[0.506s] [ 25%] [34m[1mPerforming download step (download, verify and extract) for 'EP_libphidget22'[0m
+[0.508s] -- Downloading...
+[0.508s]    dst='/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/libphidget22-1.13.20230224.tar.gz'
+[0.508s]    timeout='none'
+[0.508s]    inactivity timeout='none'
+[0.508s] -- Using src='https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz'
+[26.938s] [31mCMake Error at EP_libphidget22-prefix/src/EP_libphidget22-stamp/download-EP_libphidget22.cmake:170 (message):
+[26.938s]   Each download failed!
+[26.938s] 
+[26.938s]     error: downloading 'https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz' failed
+[26.938s]           status_code: 35
+[26.938s]           status_string: "SSL connect error"
+[26.938s]           log:
+[26.938s]           --- LOG BEGIN ---
+[26.938s]             Trying 206.251.255.126:443...
+[26.939s] 
+[26.939s]   Connected to www.phidgets.com (206.251.255.126) port 443 (#0)
+[26.939s] 
+[26.939s]   ALPN: offers h2
+[26.939s] 
+[26.939s]   ALPN: offers http/1.1
+[26.939s] 
+[26.939s]   TLSv1.0 (OUT), TLS header, Certificate Status (22):
+[26.939s] 
+[26.939s]   [5 bytes data]
+[26.939s] 
+[26.939s]   TLSv1.3 (OUT), TLS handshake, Client hello (1):
+[26.939s] 
+[26.939s]   [512 bytes data]
+[26.939s] 
+[26.939s]   OpenSSL SSL_connect: Connection reset by peer in connection to
+[26.939s]   www.phidgets.com:443
+[26.939s] 
+[26.939s]   Closing connection 0
+[26.939s] 
+[26.939s]   TLSv1.0 (OUT), TLS header, Unknown (21):
+[26.939s] 
+[26.939s]   [5 bytes data]
+[26.939s] 
+[26.940s]   TLSv1.3 (OUT), TLS alert, decode error (562):
+[26.940s] 
+[26.940s]   [2 bytes data]
+[26.940s] 
+[26.940s]   
+[26.940s] 
+[26.940s]           --- LOG END ---
+[26.940s]           
+[26.940s]     
+[26.940s] 
+[26.940s] [0m
+[26.940s] gmake[2]: *** [CMakeFiles/EP_libphidget22.dir/build.make:99: EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-download] Error 1
+[26.940s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/EP_libphidget22.dir/all] Error 2
+[26.940s] gmake: *** [Makefile:146: all] Error 2
+[26.941s] Invoked command in '/home/remi/ugway_ws/build/libphidget22' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/libphidget22 -- -j16 -l16

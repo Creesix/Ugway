@@ -1,0 +1,4 @@
+Invoking command in '/home/remi/ugway_ws/build/libphidget22': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/libphidget22 -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/libphidget22
+Invoked command in '/home/remi/ugway_ws/build/libphidget22' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/libphidget22 -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/libphidget22
+Invoking command in '/home/remi/ugway_ws/build/libphidget22': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/libphidget22 -- -j16 -l16
+Invoked command in '/home/remi/ugway_ws/build/libphidget22' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/libphidget22 -- -j16 -l16

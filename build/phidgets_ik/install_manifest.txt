@@ -1,0 +1,16 @@
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/launch/ik-launch.py
+/home/remi/ugway_ws/install/phidgets_ik/share/ament_index/resource_index/package_run_dependencies/phidgets_ik
+/home/remi/ugway_ws/install/phidgets_ik/share/ament_index/resource_index/parent_prefix_path/phidgets_ik
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/environment/ament_prefix_path.sh
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/environment/ament_prefix_path.dsv
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/environment/path.sh
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/environment/path.dsv
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/local_setup.bash
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/local_setup.sh
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/local_setup.zsh
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/local_setup.dsv
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/package.dsv
+/home/remi/ugway_ws/install/phidgets_ik/share/ament_index/resource_index/packages/phidgets_ik
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/cmake/phidgets_ikConfig.cmake
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/cmake/phidgets_ikConfig-version.cmake
+/home/remi/ugway_ws/install/phidgets_ik/share/phidgets_ik/package.xml

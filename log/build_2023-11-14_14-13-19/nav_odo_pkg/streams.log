@@ -1,0 +1,21 @@
+[0.482s] Invoking command in '/home/remi/ugway_ws/src/nav_odo_pkg': PYTHONPATH=/home/remi/ugway_ws/build/nav_odo_pkg/prefix_override:/home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav_odo_pkg build --build-base /home/remi/ugway_ws/build/nav_odo_pkg/build install --record /home/remi/ugway_ws/build/nav_odo_pkg/install.log --single-version-externally-managed
+[0.596s] running egg_info
+[0.596s] writing ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/PKG-INFO
+[0.599s] writing dependency_links to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/dependency_links.txt
+[0.599s] writing entry points to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/entry_points.txt
+[0.599s] writing requirements to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/requires.txt
+[0.599s] writing top-level names to ../../build/nav_odo_pkg/nav_odo_pkg.egg-info/top_level.txt
+[0.600s] reading manifest file '../../build/nav_odo_pkg/nav_odo_pkg.egg-info/SOURCES.txt'
+[0.601s] writing manifest file '../../build/nav_odo_pkg/nav_odo_pkg.egg-info/SOURCES.txt'
+[0.601s] running build
+[0.601s] running build_py
+[0.601s] running install
+[0.601s] running install_lib
+[0.602s] running install_data
+[0.602s] copying package.xml -> /home/remi/ugway_ws/install/nav_odo_pkg/share/nav_odo_pkg
+[0.602s] running install_egg_info
+[0.603s] removing '/home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages/nav_odo_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.603s] Copying ../../build/nav_odo_pkg/nav_odo_pkg.egg-info to /home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages/nav_odo_pkg-0.0.0-py3.10.egg-info
+[0.604s] running install_scripts
+[0.615s] writing list of installed files to '/home/remi/ugway_ws/build/nav_odo_pkg/install.log'
+[0.650s] Invoked command in '/home/remi/ugway_ws/src/nav_odo_pkg' returned '0': PYTHONPATH=/home/remi/ugway_ws/build/nav_odo_pkg/prefix_override:/home/remi/ugway_ws/install/nav_odo_pkg/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav_odo_pkg build --build-base /home/remi/ugway_ws/build/nav_odo_pkg/build install --record /home/remi/ugway_ws/build/nav_odo_pkg/install.log --single-version-externally-managed

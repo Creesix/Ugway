@@ -1,0 +1,68 @@
+[0.211s] Invoking command in '/home/remi/ugway_ws/build/phidgets_gyroscope': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_gyroscope -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_gyroscope
+[0.257s] -- The C compiler identification is GNU 11.4.0
+[0.324s] -- The CXX compiler identification is GNU 11.4.0
+[0.335s] -- Detecting C compiler ABI info
+[0.386s] -- Detecting C compiler ABI info - done
+[0.395s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.395s] -- Detecting C compile features
+[0.396s] -- Detecting C compile features - done
+[0.399s] -- Detecting CXX compiler ABI info
+[0.471s] -- Detecting CXX compiler ABI info - done
+[0.483s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.484s] -- Detecting CXX compile features
+[0.484s] -- Detecting CXX compile features - done
+[0.487s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.870s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.977s] -- Found phidgets_api: 2.3.1 (/home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake)
+[0.981s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[1.020s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.024s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.031s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.045s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.064s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.138s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.141s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.243s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.268s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.315s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.327s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.385s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.387s] -- Found Threads: TRUE  
+[1.643s] -- Found rclcpp_components: 16.0.6 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.756s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.974s] -- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+[2.101s] -- Configuring done
+[2.119s] -- Generating done
+[2.122s] -- Build files have been written to: /home/remi/ugway_ws/build/phidgets_gyroscope
+[2.136s] Invoked command in '/home/remi/ugway_ws/build/phidgets_gyroscope' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_gyroscope -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_gyroscope
+[2.138s] Invoking command in '/home/remi/ugway_ws/build/phidgets_gyroscope': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_gyroscope -- -j16 -l16
+[2.169s] [ 50%] [32mBuilding CXX object CMakeFiles/phidgets_gyroscope.dir/src/gyroscope_ros_i.cpp.o[0m
+[9.606s] [100%] [32m[1mLinking CXX shared library libphidgets_gyroscope.so[0m
+[9.821s] [100%] Built target phidgets_gyroscope
+[9.825s] Invoked command in '/home/remi/ugway_ws/build/phidgets_gyroscope' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_gyroscope -- -j16 -l16
+[9.838s] Invoking command in '/home/remi/ugway_ws/build/phidgets_gyroscope': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_gyroscope
+[9.841s] -- Install configuration: ""
+[9.841s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/lib/libphidgets_gyroscope.so
+[9.843s] -- Set runtime path of "/home/remi/ugway_ws/install/phidgets_gyroscope/lib/libphidgets_gyroscope.so" to ""
+[9.843s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/include
+[9.843s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/include/phidgets_gyroscope
+[9.843s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/include/phidgets_gyroscope/gyroscope_ros_i.hpp
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/launch
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/launch/gyroscope-launch.py
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/ament_index/resource_index/package_run_dependencies/phidgets_gyroscope
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/ament_index/resource_index/parent_prefix_path/phidgets_gyroscope
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/environment/ament_prefix_path.sh
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/environment/ament_prefix_path.dsv
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/environment/path.sh
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/environment/path.dsv
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/local_setup.bash
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/local_setup.sh
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/local_setup.zsh
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/local_setup.dsv
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/package.dsv
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/ament_index/resource_index/packages/phidgets_gyroscope
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/ament_index/resource_index/rclcpp_components/phidgets_gyroscope
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/cmake/phidgets_gyroscopeConfig.cmake
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/cmake/phidgets_gyroscopeConfig-version.cmake
+[9.844s] -- Installing: /home/remi/ugway_ws/install/phidgets_gyroscope/share/phidgets_gyroscope/package.xml
+[9.846s] Invoked command in '/home/remi/ugway_ws/build/phidgets_gyroscope' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_gyroscope

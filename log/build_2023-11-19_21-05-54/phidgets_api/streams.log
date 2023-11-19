@@ -1,0 +1,89 @@
+[0.034s] Invoking command in '/home/remi/ugway_ws/build/phidgets_api': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_api -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_api
+[0.070s] -- The C compiler identification is GNU 11.4.0
+[0.108s] -- The CXX compiler identification is GNU 11.4.0
+[0.114s] -- Detecting C compiler ABI info
+[0.149s] -- Detecting C compiler ABI info - done
+[0.155s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.155s] -- Detecting C compile features
+[0.155s] -- Detecting C compile features - done
+[0.158s] -- Detecting CXX compiler ABI info
+[0.202s] -- Detecting CXX compiler ABI info - done
+[0.207s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.207s] -- Detecting CXX compile features
+[0.207s] -- Detecting CXX compile features - done
+[0.209s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.429s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.486s] -- Found libphidget22: 2.3.1 (/home/remi/ugway_ws/install/libphidget22/share/libphidget22/cmake)
+[0.531s] -- Configuring done
+[0.535s] -- Generating done
+[0.535s] -- Build files have been written to: /home/remi/ugway_ws/build/phidgets_api
+[0.538s] Invoked command in '/home/remi/ugway_ws/build/phidgets_api' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_api -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_api
+[0.539s] Invoking command in '/home/remi/ugway_ws/build/phidgets_api': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_api -- -j16 -l16
+[0.554s] [  5%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/accelerometer.cpp.o[0m
+[0.555s] [ 15%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/analog_inputs.cpp.o[0m
+[0.555s] [ 25%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/analog_output.cpp.o[0m
+[0.555s] [ 25%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/analog_outputs.cpp.o[0m
+[0.555s] [ 30%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/digital_input.cpp.o[0m
+[0.555s] [ 40%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/digital_inputs.cpp.o[0m
+[0.556s] [ 40%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/analog_input.cpp.o[0m
+[0.556s] [ 40%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/digital_output.cpp.o[0m
+[0.556s] [ 45%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/digital_outputs.cpp.o[0m
+[0.556s] [ 50%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/encoder.cpp.o[0m
+[0.556s] [ 55%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/encoders.cpp.o[0m
+[0.557s] [ 60%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/ir.cpp.o[0m
+[0.557s] [ 65%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/motor.cpp.o[0m
+[0.557s] [ 70%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/gyroscope.cpp.o[0m
+[0.557s] [ 75%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/motors.cpp.o[0m
+[0.557s] [ 80%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/magnetometer.cpp.o[0m
+[0.813s] [ 85%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/phidget22.cpp.o[0m
+[0.816s] [ 90%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/spatial.cpp.o[0m
+[0.845s] [ 95%] [32mBuilding CXX object CMakeFiles/phidgets_api.dir/src/temperature.cpp.o[0m
+[1.069s] [100%] [32m[1mLinking CXX shared library libphidgets_api.so[0m
+[1.128s] [100%] Built target phidgets_api
+[1.131s] Invoked command in '/home/remi/ugway_ws/build/phidgets_api' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_api -- -j16 -l16
+[1.167s] Invoking command in '/home/remi/ugway_ws/build/phidgets_api': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_api
+[1.169s] -- Install configuration: ""
+[1.169s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/lib/libphidgets_api.so
+[1.170s] -- Set runtime path of "/home/remi/ugway_ws/install/phidgets_api/lib/libphidgets_api.so" to ""
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/digital_output.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/analog_outputs.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/digital_outputs.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/motors.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/motor.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/encoders.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/spatial.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/analog_input.hpp
+[1.170s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/phidget22.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/ir.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/accelerometer.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/analog_inputs.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/magnetometer.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/encoder.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/analog_output.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/gyroscope.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/temperature.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/digital_inputs.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/include/phidgets_api/digital_input.hpp
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/environment/library_path.sh
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/environment/library_path.dsv
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/ament_index/resource_index/package_run_dependencies/phidgets_api
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/ament_index/resource_index/parent_prefix_path/phidgets_api
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/environment/ament_prefix_path.sh
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/environment/ament_prefix_path.dsv
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/environment/path.sh
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/environment/path.dsv
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/local_setup.bash
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/local_setup.sh
+[1.171s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/local_setup.zsh
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/local_setup.dsv
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/package.dsv
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/ament_index/resource_index/packages/phidgets_api
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake/ament_cmake_export_libraries-extras.cmake
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake/phidgets_apiConfig.cmake
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake/phidgets_apiConfig-version.cmake
+[1.172s] -- Installing: /home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/package.xml
+[1.173s] Invoked command in '/home/remi/ugway_ws/build/phidgets_api' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_api

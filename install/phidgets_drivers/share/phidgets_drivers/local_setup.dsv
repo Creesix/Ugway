@@ -1,0 +1,2 @@
+source;share/phidgets_drivers/environment/ament_prefix_path.sh
+source;share/phidgets_drivers/environment/path.sh

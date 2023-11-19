@@ -1,0 +1,33 @@
+[0.041s] Invoking command in '/home/remi/ugway_ws/build/phidgets_msgs': /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_msgs
+[0.174s] -- The C compiler identification is GNU 11.4.0
+[0.211s] -- The CXX compiler identification is GNU 11.4.0
+[0.219s] -- Detecting C compiler ABI info
+[0.257s] -- Detecting C compiler ABI info - done
+[0.261s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.262s] -- Detecting C compile features
+[0.262s] -- Detecting C compile features - done
+[0.265s] -- Detecting CXX compiler ABI info
+[0.305s] -- Detecting CXX compiler ABI info - done
+[0.310s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.310s] -- Detecting CXX compile features
+[0.310s] -- Detecting CXX compile features - done
+[0.317s] [31mCMake Error at CMakeLists.txt:13 (find_package):
+[0.317s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.317s]   has asked CMake to find a package configuration file provided by
+[0.317s]   "ament_cmake", but CMake did not find one.
+[0.317s] 
+[0.317s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.317s]   any of the following names:
+[0.317s] 
+[0.317s]     ament_cmakeConfig.cmake
+[0.317s]     ament_cmake-config.cmake
+[0.317s] 
+[0.317s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.317s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.317s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.317s]   has been installed.
+[0.317s] 
+[0.317s] [0m
+[0.318s] -- Configuring incomplete, errors occurred!
+[0.318s] See also "/home/remi/ugway_ws/build/phidgets_msgs/CMakeFiles/CMakeOutput.log".
+[0.319s] Invoked command in '/home/remi/ugway_ws/build/phidgets_msgs' returned '1': /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_msgs

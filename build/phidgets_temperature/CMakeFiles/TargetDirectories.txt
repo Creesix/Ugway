@@ -1,0 +1,10 @@
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/uninstall.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/phidgets_temperature_uninstall.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/phidgets_temperature.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/test.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/edit_cache.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/rebuild_cache.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/list_install_components.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/install.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/install/local.dir
+/home/remi/ugway_ws/build/phidgets_temperature/CMakeFiles/install/strip.dir

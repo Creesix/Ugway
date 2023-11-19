@@ -1,0 +1,10 @@
+msg/EncoderDecimatedSpeed.idl
+msg/EncoderDecimatedSpeed.msg
+srv/SetAnalogOutput.idl
+srv/SetAnalogOutput.srv
+srv/SetAnalogOutput_Request.msg
+srv/SetAnalogOutput_Response.msg
+srv/SetDigitalOutput.idl
+srv/SetDigitalOutput.srv
+srv/SetDigitalOutput_Request.msg
+srv/SetDigitalOutput_Response.msg

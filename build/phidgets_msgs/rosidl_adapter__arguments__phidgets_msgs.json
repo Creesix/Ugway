@@ -1,0 +1,8 @@
+{
+  "package_name": "phidgets_msgs",
+  "non_idl_tuples": [
+    "/home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs:srv/SetAnalogOutput.srv",
+    "/home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs:srv/SetDigitalOutput.srv",
+    "/home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs:msg/EncoderDecimatedSpeed.msg"
+  ]
+}

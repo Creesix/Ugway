@@ -1,0 +1,67 @@
+[0.160s] Invoking command in '/home/remi/ugway_ws/build/phidgets_magnetometer': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_magnetometer -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_magnetometer
+[0.203s] -- The C compiler identification is GNU 11.4.0
+[0.261s] -- The CXX compiler identification is GNU 11.4.0
+[0.272s] -- Detecting C compiler ABI info
+[0.322s] -- Detecting C compiler ABI info - done
+[0.330s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.331s] -- Detecting C compile features
+[0.331s] -- Detecting C compile features - done
+[0.335s] -- Detecting CXX compiler ABI info
+[0.409s] -- Detecting CXX compiler ABI info - done
+[0.420s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.421s] -- Detecting CXX compile features
+[0.421s] -- Detecting CXX compile features - done
+[0.424s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.833s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.921s] -- Found phidgets_api: 2.3.1 (/home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake)
+[0.926s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.982s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.989s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.001s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.022s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.052s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.162s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.165s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.277s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.308s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.368s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.384s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.441s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.443s] -- Found Threads: TRUE  
+[1.719s] -- Found rclcpp_components: 16.0.6 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.828s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.076s] -- Configuring done
+[2.094s] -- Generating done
+[2.097s] -- Build files have been written to: /home/remi/ugway_ws/build/phidgets_magnetometer
+[2.111s] Invoked command in '/home/remi/ugway_ws/build/phidgets_magnetometer' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_magnetometer -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_magnetometer
+[2.112s] Invoking command in '/home/remi/ugway_ws/build/phidgets_magnetometer': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_magnetometer -- -j16 -l16
+[2.289s] [ 50%] [32mBuilding CXX object CMakeFiles/phidgets_magnetometer.dir/src/magnetometer_ros_i.cpp.o[0m
+[8.467s] [100%] [32m[1mLinking CXX shared library libphidgets_magnetometer.so[0m
+[8.677s] [100%] Built target phidgets_magnetometer
+[8.684s] Invoked command in '/home/remi/ugway_ws/build/phidgets_magnetometer' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_magnetometer -- -j16 -l16
+[8.763s] Invoking command in '/home/remi/ugway_ws/build/phidgets_magnetometer': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_magnetometer
+[8.765s] -- Install configuration: ""
+[8.765s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/lib/libphidgets_magnetometer.so
+[8.767s] -- Set runtime path of "/home/remi/ugway_ws/install/phidgets_magnetometer/lib/libphidgets_magnetometer.so" to ""
+[8.767s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/include
+[8.767s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/include/phidgets_magnetometer
+[8.767s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/include/phidgets_magnetometer/magnetometer_ros_i.hpp
+[8.767s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/launch
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/launch/magnetometer-launch.py
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/ament_index/resource_index/package_run_dependencies/phidgets_magnetometer
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/ament_index/resource_index/parent_prefix_path/phidgets_magnetometer
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/environment/ament_prefix_path.sh
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/environment/ament_prefix_path.dsv
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/environment/path.sh
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/environment/path.dsv
+[8.768s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/local_setup.bash
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/local_setup.sh
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/local_setup.zsh
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/local_setup.dsv
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/package.dsv
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/ament_index/resource_index/packages/phidgets_magnetometer
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/ament_index/resource_index/rclcpp_components/phidgets_magnetometer
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/cmake/phidgets_magnetometerConfig.cmake
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/cmake/phidgets_magnetometerConfig-version.cmake
+[8.769s] -- Installing: /home/remi/ugway_ws/install/phidgets_magnetometer/share/phidgets_magnetometer/package.xml
+[8.770s] Invoked command in '/home/remi/ugway_ws/build/phidgets_magnetometer' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_magnetometer

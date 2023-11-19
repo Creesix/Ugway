@@ -1,0 +1,10 @@
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/uninstall.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/phidgets_gyroscope_uninstall.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/phidgets_gyroscope.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/test.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/edit_cache.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/rebuild_cache.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/list_install_components.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/install.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/install/local.dir
+/home/remi/ugway_ws/build/phidgets_gyroscope/CMakeFiles/install/strip.dir

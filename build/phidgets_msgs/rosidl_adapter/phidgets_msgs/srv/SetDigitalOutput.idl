@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from phidgets_msgs/srv/SetDigitalOutput.srv
+// generated code does not contain a copyright notice
+
+
+module phidgets_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Sets the state of a digital output.")
+    struct SetDigitalOutput_Request {
+      @verbatim (language="comment", text=
+        "index of the output to be set")
+      uint16 index;
+
+      boolean state;
+    };
+    struct SetDigitalOutput_Response {
+      boolean success;
+    };
+  };
+};

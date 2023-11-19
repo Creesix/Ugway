@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info
+writing ../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/PKG-INFO
+writing dependency_links to ../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/dependency_links.txt
+writing entry points to ../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/entry_points.txt
+writing requirements to ../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/requires.txt
+writing top-level names to ../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/top_level.txt
+writing manifest file '../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/SOURCES.txt'
+reading manifest file '../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/SOURCES.txt'
+writing manifest file '../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/remi/ugway_ws/build/phidget_stepper_controllers/build
+creating /home/remi/ugway_ws/build/phidget_stepper_controllers/build/lib
+creating /home/remi/ugway_ws/build/phidget_stepper_controllers/build/lib/phidget_stepper_controllers
+copying phidget_stepper_controllers/__init__.py -> /home/remi/ugway_ws/build/phidget_stepper_controllers/build/lib/phidget_stepper_controllers
+running install
+running install_lib
+creating /home/remi/ugway_ws/install/phidget_stepper_controllers/lib/python3.10/site-packages/phidget_stepper_controllers
+copying /home/remi/ugway_ws/build/phidget_stepper_controllers/build/lib/phidget_stepper_controllers/__init__.py -> /home/remi/ugway_ws/install/phidget_stepper_controllers/lib/python3.10/site-packages/phidget_stepper_controllers
+byte-compiling /home/remi/ugway_ws/install/phidget_stepper_controllers/lib/python3.10/site-packages/phidget_stepper_controllers/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/remi/ugway_ws/install/phidget_stepper_controllers/share/ament_index
+creating /home/remi/ugway_ws/install/phidget_stepper_controllers/share/ament_index/resource_index
+creating /home/remi/ugway_ws/install/phidget_stepper_controllers/share/ament_index/resource_index/packages
+copying resource/phidget_stepper_controllers -> /home/remi/ugway_ws/install/phidget_stepper_controllers/share/ament_index/resource_index/packages
+copying package.xml -> /home/remi/ugway_ws/install/phidget_stepper_controllers/share/phidget_stepper_controllers
+running install_egg_info
+Copying ../../build/phidget_stepper_controllers/phidget_stepper_controllers.egg-info to /home/remi/ugway_ws/install/phidget_stepper_controllers/lib/python3.10/site-packages/phidget_stepper_controllers-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/remi/ugway_ws/build/phidget_stepper_controllers/install.log'

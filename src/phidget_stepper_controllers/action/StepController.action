@@ -1,0 +1,10 @@
+#goal
+int64 steps_goal
+int64 velocity_limit
+---
+#result
+int64 steps_done
+bool done
+---
+#feedback
+int64 steps_from_start

@@ -1,0 +1,66 @@
+[0.080s] Invoking command in '/home/remi/ugway_ws/build/phidgets_temperature': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_temperature -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_temperature
+[0.122s] -- The C compiler identification is GNU 11.4.0
+[0.181s] -- The CXX compiler identification is GNU 11.4.0
+[0.192s] -- Detecting C compiler ABI info
+[0.248s] -- Detecting C compiler ABI info - done
+[0.258s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.259s] -- Detecting C compile features
+[0.259s] -- Detecting C compile features - done
+[0.263s] -- Detecting CXX compiler ABI info
+[0.337s] -- Detecting CXX compiler ABI info - done
+[0.347s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.347s] -- Detecting CXX compile features
+[0.347s] -- Detecting CXX compile features - done
+[0.350s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.734s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.830s] -- Found phidgets_api: 2.3.1 (/home/remi/ugway_ws/install/phidgets_api/share/phidgets_api/cmake)
+[0.835s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.887s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.891s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.900s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.914s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.933s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.000s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.002s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.092s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.118s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.161s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.176s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.244s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.246s] -- Found Threads: TRUE  
+[1.450s] -- Found rclcpp_components: 16.0.6 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.642s] -- Configuring done
+[1.655s] -- Generating done
+[1.657s] -- Build files have been written to: /home/remi/ugway_ws/build/phidgets_temperature
+[1.669s] Invoked command in '/home/remi/ugway_ws/build/phidgets_temperature' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_temperature -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_temperature
+[1.673s] Invoking command in '/home/remi/ugway_ws/build/phidgets_temperature': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_temperature -- -j16 -l16
+[1.763s] [ 50%] [32mBuilding CXX object CMakeFiles/phidgets_temperature.dir/src/temperature_ros_i.cpp.o[0m
+[6.474s] [100%] [32m[1mLinking CXX shared library libphidgets_temperature.so[0m
+[6.759s] [100%] Built target phidgets_temperature
+[6.765s] Invoked command in '/home/remi/ugway_ws/build/phidgets_temperature' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_temperature -- -j16 -l16
+[6.864s] Invoking command in '/home/remi/ugway_ws/build/phidgets_temperature': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_temperature
+[6.867s] -- Install configuration: ""
+[6.868s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/lib/libphidgets_temperature.so
+[6.870s] -- Set runtime path of "/home/remi/ugway_ws/install/phidgets_temperature/lib/libphidgets_temperature.so" to ""
+[6.870s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/include
+[6.870s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/include/phidgets_temperature
+[6.870s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/include/phidgets_temperature/temperature_ros_i.hpp
+[6.870s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/launch
+[6.870s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/launch/temperature-launch.py
+[6.870s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/ament_index/resource_index/package_run_dependencies/phidgets_temperature
+[6.870s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/ament_index/resource_index/parent_prefix_path/phidgets_temperature
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/environment/ament_prefix_path.sh
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/environment/ament_prefix_path.dsv
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/environment/path.sh
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/environment/path.dsv
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/local_setup.bash
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/local_setup.sh
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/local_setup.zsh
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/local_setup.dsv
+[6.871s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/package.dsv
+[6.872s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/ament_index/resource_index/packages/phidgets_temperature
+[6.872s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/ament_index/resource_index/rclcpp_components/phidgets_temperature
+[6.872s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/cmake/phidgets_temperatureConfig.cmake
+[6.872s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/cmake/phidgets_temperatureConfig-version.cmake
+[6.872s] -- Installing: /home/remi/ugway_ws/install/phidgets_temperature/share/phidgets_temperature/package.xml
+[6.874s] Invoked command in '/home/remi/ugway_ws/build/phidgets_temperature' returned '0': AMENT_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remi/ugway_ws/install/phidgets_api:/home/remi/ugway_ws/install/libphidget22:/opt/ros/humble LD_LIBRARY_PATH=/home/remi/ugway_ws/install/phidgets_api/lib:/home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_temperature

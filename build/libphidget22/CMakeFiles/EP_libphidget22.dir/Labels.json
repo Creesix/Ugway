@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/CMakeFiles/EP_libphidget22"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/CMakeFiles/EP_libphidget22.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/CMakeFiles/EP_libphidget22-complete.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-build.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-configure.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-download.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-install.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-mkdir.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-patch.rule"
+		},
+		{
+			"file" : "/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/EP_libphidget22-stamp/EP_libphidget22-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"EP_libphidget22"
+		],
+		"name" : "EP_libphidget22"
+	}
+}

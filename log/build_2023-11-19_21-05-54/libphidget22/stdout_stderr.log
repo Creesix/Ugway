@@ -1,0 +1,536 @@
+[ 12%] [34m[1mPerforming download step (download, verify and extract) for 'EP_libphidget22'[0m
+-- verifying file...
+       file='/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/libphidget22-1.13.20230224.tar.gz'
+-- MD5 hash of
+    /home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/libphidget22-1.13.20230224.tar.gz
+  does not match expected value
+    expected: 'e34f6bf266562d1950a82067ab5beaa9'
+      actual: 'd41d8cd98f00b204e9800998ecf8427e'
+-- File already exists but hash mismatch. Removing...
+-- Downloading...
+   dst='/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/libphidget22-1.13.20230224.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.13.20230224.tar.gz'
+-- [download 1% complete]
+-- [download 2% complete]
+-- [download 3% complete]
+-- [download 4% complete]
+-- [download 5% complete]
+-- [download 6% complete]
+-- [download 7% complete]
+-- [download 8% complete]
+-- [download 9% complete]
+-- [download 10% complete]
+-- [download 11% complete]
+-- [download 12% complete]
+-- [download 13% complete]
+-- [download 14% complete]
+-- [download 15% complete]
+-- [download 16% complete]
+-- [download 17% complete]
+-- [download 18% complete]
+-- [download 19% complete]
+-- [download 20% complete]
+-- [download 21% complete]
+-- [download 22% complete]
+-- [download 23% complete]
+-- [download 24% complete]
+-- [download 25% complete]
+-- [download 26% complete]
+-- [download 27% complete]
+-- [download 28% complete]
+-- [download 29% complete]
+-- [download 30% complete]
+-- [download 31% complete]
+-- [download 32% complete]
+-- [download 33% complete]
+-- [download 34% complete]
+-- [download 35% complete]
+-- [download 36% complete]
+-- [download 37% complete]
+-- [download 38% complete]
+-- [download 39% complete]
+-- [download 40% complete]
+-- [download 41% complete]
+-- [download 42% complete]
+-- [download 43% complete]
+-- [download 44% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 47% complete]
+-- [download 48% complete]
+-- [download 49% complete]
+-- [download 50% complete]
+-- [download 51% complete]
+-- [download 52% complete]
+-- [download 53% complete]
+-- [download 54% complete]
+-- [download 55% complete]
+-- [download 56% complete]
+-- [download 57% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 60% complete]
+-- [download 61% complete]
+-- [download 62% complete]
+-- [download 63% complete]
+-- [download 64% complete]
+-- [download 65% complete]
+-- [download 66% complete]
+-- [download 67% complete]
+-- [download 68% complete]
+-- [download 69% complete]
+-- [download 70% complete]
+-- [download 71% complete]
+-- [download 72% complete]
+-- [download 73% complete]
+-- [download 74% complete]
+-- [download 75% complete]
+-- [download 76% complete]
+-- [download 77% complete]
+-- [download 78% complete]
+-- [download 79% complete]
+-- [download 80% complete]
+-- [download 81% complete]
+-- [download 82% complete]
+-- [download 83% complete]
+-- [download 84% complete]
+-- [download 85% complete]
+-- [download 86% complete]
+-- [download 87% complete]
+-- [download 88% complete]
+-- [download 89% complete]
+-- [download 90% complete]
+-- [download 91% complete]
+-- [download 92% complete]
+-- [download 93% complete]
+-- [download 94% complete]
+-- [download 95% complete]
+-- [download 96% complete]
+-- [download 97% complete]
+-- [download 98% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- verifying file...
+       file='/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/libphidget22-1.13.20230224.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/home/remi/ugway_ws/build/libphidget22/EP_libphidget22-prefix/src/libphidget22-1.13.20230224.tar.gz'
+     dst='/home/remi/ugway_ws/build/libphidget22/libphidget22-src'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 25%] [34m[1mNo update step for 'EP_libphidget22'[0m
+[ 37%] [34m[1mPerforming patch step for 'EP_libphidget22'[0m
+patching file configure
+patching file src/class/generic.c
+patching file src/class/motorpositioncontroller.c
+patching file src/device/bridgedevice.c
+patching file src/device/dataadapterdevice.c
+patching file src/device/encoderdevice.c
+patching file src/device/hubdevice.c
+patching file src/device/meshdongledevice.c
+patching file src/device/rfiddevice.c
+patching file src/ext/mos/sha2.c
+patching file src/plat/linux/usblinux.c
+patching file src/util/dataadaptersupport.c
+patching file src/util/log.c
+patching file src/util/phidgetlog.h
+patching file src/vintpackets.c
+[ 50%] [34m[1mPerforming configure step for 'EP_libphidget22'[0m
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether make supports nested variables... (cached) yes
+checking for gcc option to accept ISO C99... none needed
+checking whether byte ordering is bigendian... no
+checking for ldconfig... /sbin/ldconfig
+checking for library containing dlopen... none required
+checking for library containing sqrt... -lm
+checking for library containing pthread_create... none required
+checking for library containing libusb_init... -lusb-1.0
+checking for newlocale in xlocale.h... no
+checking for newlocale in locale.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libphidget22.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+[ 62%] [34m[1mPerforming build step for 'EP_libphidget22'[0m
+  CC       src/formatters.lo
+  CC       src/gpp.lo
+  CC       src/lightning.lo
+  CC       src/mesh.lo
+  CC       src/manager.lo
+  CC       src/object.lo
+  CC       src/phidget.lo
+  CC       src/phidget22.lo
+  CC       src/spi.lo
+  CC       src/stats.lo
+  CC       src/supportedpacket.gen.lo
+  CC       src/usb.lo
+  CC       src/vintpackets.lo
+  CC       src/vint.lo
+  CC       src/virtual.lo
+Making phidget22.h
+  CC       src/analogsensor.lo
+  CC       src/bridge.lo
+  CC       src/bridgepackets.gen.lo
+  CC       src/class/accelerometer.lo
+  CC       src/class/bldcmotor.lo
+  CC       src/class/capacitivetouch.lo
+  CC       src/class/currentinput.lo
+  CC       src/class/currentoutput.lo
+  CC       src/class/dataadapter.lo
+  CC       src/class/dcmotor.lo
+  CC       src/class/dictionary.lo
+  CC       src/class/digitalinput.lo
+  CC       src/class/digitaloutput.lo
+  CC       src/class/distancesensor.lo
+  CC       src/class/encoder.lo
+  CC       src/class/firmwareupgrade.lo
+  CC       src/class/frequencycounter.lo
+  CC       src/class/generic.lo
+  CC       src/class/gps.lo
+  CC       src/class/gyroscope.lo
+  CC       src/class/hub.lo
+  CC       src/class/humiditysensor.lo
+  CC       src/class/ir.lo
+  CC       src/class/lcd.lo
+  CC       src/class/lightsensor.lo
+  CC       src/class/magnetometer.lo
+  CC       src/class/meshdongle.lo
+  CC       src/class/motorpositioncontroller.lo
+  CC       src/class/motorvelocitycontroller.lo
+  CC       src/class/phsensor.lo
+  CC       src/class/powerguard.lo
+  CC       src/class/pressuresensor.lo
+  CC       src/class/rcservo.lo
+  CC       src/class/resistanceinput.lo
+  CC       src/class/rfid.lo
+  CC       src/class/soundsensor.lo
+  CC       src/class/spatial.lo
+  CC       src/class/stepper.lo
+  CC       src/class/temperaturesensor.lo
+  CC       src/class/voltageinput.lo
+  CC       src/class/voltageoutput.lo
+  CC       src/class/voltageratioinput.lo
+  CC       src/constants.lo
+  CC       src/datainterval.gen.lo
+  CC       src/debug.lo
+  CC       src/device/accelerometerdevice.lo
+  CC       src/device/advancedservodevice.lo
+  CC       src/device/analogdevice.lo
+  CC       src/device/bridgedevice.lo
+  CC       src/device/dataadapterdevice.lo
+  CC       src/device/dictionarydevice.lo
+  CC       src/device/encoderdevice.lo
+  CC       src/device/firmwareupgradedevice.lo
+  CC       src/device/frequencycounterdevice.lo
+  CC       src/device/genericdevice.lo
+  CC       src/device/gpsdevice.lo
+  CC       src/device/hubdevice.lo
+  CC       src/device/interfacekitdevice.lo
+  CC       src/device/irdevice.lo
+  CC       src/device/leddevice.lo
+  CC       src/device/meshdongledevice.lo
+  CC       src/device/motorcontroldevice.lo
+  CC       src/device/phsensordevice.lo
+  CC       src/device/rfiddevice.lo
+  CC       src/device/servodevice.lo
+  CC       src/device/spatialdevice.lo
+  CC       src/device/stepperdevice.lo
+  CC       src/device/temperaturesensordevice.lo
+  CC       src/device/textlcddevice.lo
+  CC       src/device/vintdevice.lo
+  CC       src/devices.lo
+  CC       src/dispatch.lo
+  CC       src/enumutil.gen.lo
+  CC       src/errorstrings.gen.lo
+  CC       src/ext/cvtutf.lo
+  CC       src/ext/md5.lo
+  CC       src/ext/mos/base64.lo
+  CC       src/ext/mos/base.lo
+  CC       src/ext/mos/crc32.lo
+  CC       src/ext/mos/ctype.lo
+  CC       src/ext/mos/endswith.lo
+  CC       src/ext/mos/getcwd.lo
+  CC       src/ext/mos/getenv.lo
+  CC       src/ext/mos/getopt.lo
+  CC       src/ext/mos/getpasswd-unix.lo
+  CC       src/ext/mos/glob.lo
+  CC       src/ext/mos/glock.lo
+  CC       src/ext/mos/hexdump.lo
+  CC       src/ext/mos/init_daemon.lo
+  CC       src/ext/mos/iop.lo
+  CC       src/ext/mos/kv/kv.lo
+  CC       src/ext/mos/kv/kvent.lo
+  CC       src/ext/mos/kv/parse.lo
+  CC       src/ext/mos/kv/scan.lo
+  CC       src/ext/mos/malloc.lo
+  CC       src/ext/mos/malloc-user.lo
+  CC       src/ext/mos/md5c.lo
+  CC       src/ext/mos/memchr.lo
+  CC       src/ext/mos/memcmp.lo
+  CC       src/ext/mos/memmem.lo
+  CC       src/ext/mos/mkdirp.lo
+  CC       src/ext/mos/mos_atomic-pthread.lo
+  CC       src/ext/mos/mos_dl-unix.lo
+  CC       src/ext/mos/mos_error-errno.lo
+  CC       src/ext/mos/mos_fileio-unix-user.lo
+  CC       src/ext/mos/mos_lock-pthread.lo
+  CC       src/ext/mos/mos_net.lo
+  CC       src/ext/mos/mos_netops-unix.lo
+  CC       src/ext/mos/mos_os.lo
+  CC       src/ext/mos/mos_random-unix.lo
+  CC       src/ext/mos/mos_setenv-native.lo
+  CC       src/ext/mos/mos_stacktrace-gnu.lo
+  CC       src/ext/mos/mos_task-pthread.lo
+  CC       src/ext/mos/mos_time-unix.lo
+  CC       src/ext/mos/mos_tlock.lo
+  CC       src/ext/mos/path.lo
+  CC       src/ext/mos/pkcs5_pbkdf2.lo
+  CC       src/ext/mos/printf-smart.lo
+  CC       src/ext/mos/process-unix.lo
+  CC       src/ext/mos/rand48.lo
+  CC       src/ext/mos/random.lo
+  CC       src/ext/mos/readdir-unix.lo
+  CC       src/ext/mos/readline.lo
+  CC       src/ext/mos/rwrlock.lo
+  CC       src/ext/mos/scanf.lo
+  CC       src/ext/mos/sha1.lo
+  CC       src/ext/mos/sha2.lo
+  CC       src/ext/mos/snprintf.lo
+  CC       src/ext/mos/strcasecmp.lo
+  CC       src/ext/mos/strchr.lo
+  CC       src/ext/mos/strcmp.lo
+  CC       src/ext/mos/strdup.lo
+  CC       src/ext/mos/strlcat.lo
+  CC       src/ext/mos/strlcpy.lo
+  CC       src/ext/mos/strlen.lo
+  CC       src/ext/mos/strncmp.lo
+  CC       src/ext/mos/strncpy.lo
+  CC       src/ext/mos/strnsep.lo
+  CC       src/ext/mos/strnstr.lo
+  CC       src/ext/mos/strrchr.lo
+  CC       src/ext/mos/strrev.lo
+  CC       src/ext/mos/strstr.lo
+  CC       src/ext/mos/strton.lo
+  CC       src/ext/mos/strtrim.lo
+  CC       src/ext/mos/time.lo
+  CC       src/ext/mos/urldecode.lo
+  CC       src/ext/mos/urlencode.lo
+  CC       src/ext/mos/vasprintf.lo
+  CC       src/network/channel.lo
+  CC       src/network/client.lo
+  CC       src/network/network.lo
+  CC       src/network/networkcontrol.lo
+  CC       src/network/server.lo
+  CC       src/network/servers.lo
+  CC       src/network/zeroconf-avahi.lo
+  CC       src/plat/linux/usblinux.lo
+  CC       src/util/config.lo
+  CC       src/util/dataadaptersupport.lo
+  CC       src/util/irsupport.lo
+  CC       src/util/jsmn.lo
+  CC       src/util/json.lo
+  CC       src/util/log.lo
+  CC       src/util/packettracker.lo
+  CC       src/util/packing.lo
+  CC       src/util/rfidsupport.lo
+  CC       src/util/utils.lo
+  CC       src/util/voltageinputsupport.lo
+  CCLD     libphidget22.la
+[ 75%] [34m[1mPerforming install step for 'EP_libphidget22'[0m
+ /usr/bin/mkdir -p '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib'
+ /usr/bin/mkdir -p '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/include/mos'
+ /usr/bin/mkdir -p '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/include/mos/kv'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libphidget22.la '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib'
+ /usr/bin/mkdir -p '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib/pkgconfig'
+ /usr/bin/mkdir -p '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/include'
+ /usr/bin/install -c -m 644 /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/kv/kv.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/kv/parse.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/kv/scan.h '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/include/mos/kv'
+ /usr/bin/install -c -m 644 phidget22.h '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/include'
+ /usr/bin/install -c -m 644 libphidget22.pc '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib/pkgconfig'
+ /usr/bin/install -c -m 644 /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/bsdqueue.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/bsdtree.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/init_daemon.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_assert.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_atomic.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_base64.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_basic.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_basic_types.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_byteorder.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_crc32.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_crc32_impl.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_dl.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_endian-i386.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_error-errno.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_fmt.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_fileio.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_getpasswd.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_hexdump.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_iop.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_lock.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_macrocompat.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_md5.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_net.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_netops.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_os.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_os-Linux-user.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_random.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_readdir.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_readline.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_rwrlock.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_service.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_sha1.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_sha2.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_stacktrace.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_task.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_time.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_tlock.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_typeio.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_urldecode.h /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/mos_urlencode.h '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/include/mos'
+ /usr/bin/install -c -m 644 /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/mos/pkcs5_pbkdf2.h '/home/remi/ugway_ws/build/libphidget22/libphidget22_install/include/mos'
+libtool: install: /usr/bin/install -c .libs/libphidget22.so.0.0.0 /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib/libphidget22.so.0.0.0
+libtool: install: (cd /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib && { ln -s -f libphidget22.so.0.0.0 libphidget22.so.0 || { rm -f libphidget22.so.0 && ln -s libphidget22.so.0.0.0 libphidget22.so.0; }; })
+libtool: install: (cd /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib && { ln -s -f libphidget22.so.0.0.0 libphidget22.so || { rm -f libphidget22.so && ln -s libphidget22.so.0.0.0 libphidget22.so; }; })
+libtool: install: /usr/bin/install -c .libs/libphidget22.lai /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib/libphidget22.la
+libtool: install: /usr/bin/install -c .libs/libphidget22.a /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib/libphidget22.a
+libtool: install: chmod 644 /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib/libphidget22.a
+libtool: install: ranlib /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib/libphidget22.a
+libtool: finish: PATH="/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/sbin" ldconfig -n /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/remi/ugway_ws/build/libphidget22/libphidget22_install/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+[ 87%] [34m[1mCompleted 'EP_libphidget22'[0m
+[100%] Built target EP_libphidget22
+-- Install configuration: ""
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib/
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib//pkgconfig
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib//pkgconfig/libphidget22.pc
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib//libphidget22.so
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib//libphidget22.so.0
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib//libphidget22.a
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib//libphidget22.so.0.0.0
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/lib//libphidget22.la
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22/
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_endian-i386.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_tlock.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_random.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/pkcs5_pbkdf2.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_sha1.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_basic_types.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_os.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_macrocompat.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/kv
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/kv/kv.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/kv/parse.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/kv/scan.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_md5.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_crc32.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_netops.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_time.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_task.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_lock.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_assert.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_base64.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_iop.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_net.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_sha2.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_os-Linux-user.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_service.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_getpasswd.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/init_daemon.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_fileio.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_typeio.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_error-errno.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_readline.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_crc32_impl.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_stacktrace.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_readdir.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_dl.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_hexdump.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_rwrlock.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_urldecode.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_byteorder.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_atomic.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/bsdtree.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_basic.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/bsdqueue.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_fmt.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//mos/mos_urlencode.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/opt/libphidget22/include/libphidget22//phidget22.h
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/environment/libphidget22_library_path.sh
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/environment/libphidget22_library_path.dsv
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/ament_index/resource_index/package_run_dependencies/libphidget22
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/ament_index/resource_index/parent_prefix_path/libphidget22
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/environment/ament_prefix_path.sh
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/environment/ament_prefix_path.dsv
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/environment/path.sh
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/environment/path.dsv
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/local_setup.bash
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/local_setup.sh
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/local_setup.zsh
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/local_setup.dsv
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/package.dsv
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/ament_index/resource_index/packages/libphidget22
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/cmake/libphidget22-extras.cmake
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/cmake/libphidget22Config.cmake
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/cmake/libphidget22Config-version.cmake
+-- Installing: /home/remi/ugway_ws/install/libphidget22/share/libphidget22/package.xml
