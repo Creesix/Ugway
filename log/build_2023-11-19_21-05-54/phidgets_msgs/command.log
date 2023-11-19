@@ -1,4 +1,0 @@
-Invoking command in '/home/remi/ugway_ws/build/phidgets_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_msgs -- -j16 -l16
-Invoked command in '/home/remi/ugway_ws/build/phidgets_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/remi/ugway_ws/build/phidgets_msgs -- -j16 -l16
-Invoking command in '/home/remi/ugway_ws/build/phidgets_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_msgs
-Invoked command in '/home/remi/ugway_ws/build/phidgets_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/remi/ugway_ws/build/phidgets_msgs

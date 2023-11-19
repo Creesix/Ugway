@@ -1,1 +1,0 @@
-cmd='<SOURCE_DIR>/configure;CFLAGS=-g -O2 -Wno-incompatible-pointer-types -Wno-deprecated-declarations -Wno-format-truncation -fPIC;--prefix=/home/remi/ugway_ws/build/libphidget22/libphidget22_install;--disable-ldconfig'

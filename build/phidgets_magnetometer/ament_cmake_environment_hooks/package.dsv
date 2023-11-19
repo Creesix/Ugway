@@ -1,4 +1,0 @@
-source;share/phidgets_magnetometer/local_setup.bash
-source;share/phidgets_magnetometer/local_setup.dsv
-source;share/phidgets_magnetometer/local_setup.sh
-source;share/phidgets_magnetometer/local_setup.zsh

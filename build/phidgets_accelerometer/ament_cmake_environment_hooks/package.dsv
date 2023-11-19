@@ -1,4 +1,0 @@
-source;share/phidgets_accelerometer/local_setup.bash
-source;share/phidgets_accelerometer/local_setup.dsv
-source;share/phidgets_accelerometer/local_setup.sh
-source;share/phidgets_accelerometer/local_setup.zsh

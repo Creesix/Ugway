@@ -1,6 +1,0 @@
-source;share/phidget_stepper_controllers/hook/pythonpath.ps1
-source;share/phidget_stepper_controllers/hook/pythonpath.dsv
-source;share/phidget_stepper_controllers/hook/pythonpath.sh
-source;share/phidget_stepper_controllers/hook/ament_prefix_path.ps1
-source;share/phidget_stepper_controllers/hook/ament_prefix_path.dsv
-source;share/phidget_stepper_controllers/hook/ament_prefix_path.sh

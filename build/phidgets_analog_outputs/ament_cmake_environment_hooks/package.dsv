@@ -1,4 +1,0 @@
-source;share/phidgets_analog_outputs/local_setup.bash
-source;share/phidgets_analog_outputs/local_setup.dsv
-source;share/phidgets_analog_outputs/local_setup.sh
-source;share/phidgets_analog_outputs/local_setup.zsh

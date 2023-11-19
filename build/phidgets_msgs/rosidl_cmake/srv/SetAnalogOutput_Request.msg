@@ -1,4 +1,0 @@
-# Sets the state of an analog output.
-
-uint16 index   # index of the output to be set
-float64 voltage

@@ -1,2 +1,0 @@
-Invoking command in '/home/remi/ugway_ws/build/phidgets_msgs': /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_msgs
-Invoked command in '/home/remi/ugway_ws/build/phidgets_msgs' returned '1': /usr/bin/cmake /home/remi/ugway_ws/src/phidgets_drivers/phidgets_msgs -DCMAKE_INSTALL_PREFIX=/home/remi/ugway_ws/install/phidgets_msgs

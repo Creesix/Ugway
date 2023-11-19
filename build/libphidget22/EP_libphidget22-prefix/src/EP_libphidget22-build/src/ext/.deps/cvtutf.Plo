@@ -1,6 +1,0 @@
-src/ext/cvtutf.lo: \
- /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/cvtutf.c \
- /usr/include/stdc-predef.h \
- /home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/cvtutf.h
-/usr/include/stdc-predef.h:
-/home/remi/ugway_ws/build/libphidget22/libphidget22-src/src/ext/cvtutf.h:
