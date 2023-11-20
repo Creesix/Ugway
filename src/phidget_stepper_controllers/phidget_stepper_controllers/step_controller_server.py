@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import rospy
+# A remplacer par rcllpy import rospy
 
 from Phidget22.Phidget import *
 from Phidget22.Devices.Stepper import *
