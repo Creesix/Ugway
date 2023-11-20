@@ -48,6 +48,8 @@ class SpeedControllerServer:
         self.speed = 0
         self.stopped = False
 
+        self.node = node
+
         # listen to topics
         if stop_topic is not None:
             self.stop_topic  = node.create_subscription(Bool, 'stop_topic', self.stop_callback, 1)
@@ -76,7 +78,7 @@ class SpeedControllerServer:
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT
 
-    async def execute_callback(self, goal_handle):
+    def execute_callback(self, goal_handle):
         self.speed = goal_handle.velocity_limit
         self.stepper.setVelocityLimit(self.speed * self.speed_factor)
 
@@ -92,7 +94,7 @@ class SpeedControllerServer:
             feedback.theoretical_velocity = self.stepper.getVelocity() / self.speed_factor
             goal_handle.publish_feedback(feedback)
 
-            node.create_rate(0.1).sleep()
+            self.node.create_rate(0.1).sleep()
 
         # publish result
         result = SpeedController.Result()
