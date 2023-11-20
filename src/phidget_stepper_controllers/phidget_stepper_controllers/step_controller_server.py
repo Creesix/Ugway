@@ -12,6 +12,7 @@ from std_msgs.msg import Float64, Bool
 
 def init_stepper(hub_serial, hub_port, rescale_factor):
     """
+    Je suis un joyeux commentaire
     Init the stepper at the hub_port
 
     @param rescale_factor: the factor to rescale the unit to a step
