@@ -29,8 +29,6 @@ def init_stepper(hub_serial, hub_port, rescale_factor):
 
     return stepper
 
-
-
 class StepControllerServer:
 
     def __init__(self, hub_serial, hub_port, action_server_name, rescale_factor=1/32, stop_topic=None, speed_factor_topic=None):
