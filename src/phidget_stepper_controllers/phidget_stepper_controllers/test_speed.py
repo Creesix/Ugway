@@ -25,8 +25,8 @@ class TestNode(Node):
 
   def run(self):
         #Declare parameter
-        stepper = self.declare_parameter('stepper', 4).value
-        serialNumber = self.declare_parameter('hub', 627520).value
+        stepper = self.declare_parameter('stepper', 0).value
+        serialNumber = self.declare_parameter('hub', 723793).value
         ticsPerStep = self.declare_parameter('ticsPerStep', 32).value
         step_per_rotation = 360/self.declare_parameter('pasStepper', 1.8).value
 
