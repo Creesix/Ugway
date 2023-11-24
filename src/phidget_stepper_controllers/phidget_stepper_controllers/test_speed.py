@@ -2,7 +2,6 @@
 import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node
-import asyncio
 
 from phidget_stepper_controllers_msgs.action import SpeedController
 from phidget_stepper_controllers.speed_controller_server import SpeedControllerServer
@@ -11,8 +10,6 @@ from phidget_stepper_controllers.speed_controller_server import SpeedControllerS
 from std_msgs.msg import Float64, Bool
 
 def speed_done(result):
-
-
     print(f"Action has ended. done = {result.done}")
 
 def speed_feedback( feedback):
@@ -37,7 +34,7 @@ class TestNode(Node):
             step_per_rotation = int(step_per_rotation)
 
 
-        # node.get_logger().info('Created node')
+        self.get_logger().info('Created node')
 
         stop_topic = self.create_publisher(Bool, 'stop', 10)
         speed_factor_topic = self.create_publisher(Float64, 'speed_factor', 10)
