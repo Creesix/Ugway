@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
-# A remplacer par rcllpy import rospy
+import rclpy
+from rclpy.action import ActionServer
+from rclpy.action import CancelResponse
+from rclpy.action import GoalResponse
 
 from Phidget22.Phidget import *
 from Phidget22.Devices.Stepper import *
 
-import actionlib
-from phidget_stepper_controllers.msg import StepControllerAction, StepControllerResult, StepControllerFeedback
+from phidget_stepper_controllers_msgs.action import StepController
+
 from std_msgs.msg import Float64, Bool
 
 
@@ -32,7 +35,7 @@ def init_stepper(hub_serial, hub_port, rescale_factor):
 
 class StepControllerServer:
 
-    def __init__(self, hub_serial, hub_port, action_server_name, rescale_factor=1/32, stop_topic=None, speed_factor_topic=None):
+    def __init__(self, node, hub_serial, hub_port, action_server_name, rescale_factor=1/32, stop_topic=None, speed_factor_topic=None):
         """
         Create an action server controlling the stepper step by step
 
@@ -50,9 +53,9 @@ class StepControllerServer:
 
         # listen to topics
         if stop_topic is not None:
-            self.stop_topic = rospy.Subscriber(stop_topic, Bool, self.stop_callback, queue_size=1)
+            self.stop_topic  = node.create_subscription(Bool, 'stop_topic', self.stop_callback, 1)
         if speed_factor_topic is not None:
-            self.speed_factor_topic = rospy.Subscriber(speed_factor_topic, Float64, self.speed_callback, queue_size=1)
+            self.speed_factor_topic  = node.create_subscription(Float64, 'speed_factor_topic', self.speed_callback, 1)
 
         # init stepper
         self.stepper = init_stepper(hub_serial, hub_port, rescale_factor)
@@ -62,15 +65,23 @@ class StepControllerServer:
         self.stepper.setTargetPosition(self.stepper.getPosition())
 
         # launch the action server
-        self._as = actionlib.SimpleActionServer(action_server_name, StepControllerAction,
-                                                execute_cb=self.execute_cb, auto_start=False)
-        self._as.start()
+        self._as = ActionServer(node,
+                                StepController,
+                                action_server_name,
+                                execute_callback=self.execute_callback,
+                                goal_callback=self.goal_callback,
+                                cancel_callback=self.cancel_callback)
 
-        rospy.loginfo(f"[Stepper Lib][{action_server_name}] Initialization complete")
+        node.get_logger().info(f"[Stepper Lib][{action_server_name}] Initialization complete")
 
+    def goal_callback(self, goal_request):
+        return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
 
-    def execute_cb(self, goal):
-        result = StepControllerResult()
+    def cancel_callback(self, goal_handle):
+        return CancelResponse.ACCEPT
+
+    def execute_callback(self, goal_handle):
+        result = StepController.Result()
 
         if self.stopped:
             self.stepper.setVelocityLimit(0)
@@ -83,28 +94,41 @@ class StepControllerServer:
 
         origin = self.stepper.getPosition()
         current = origin
-        target = origin + goal.steps_goal
+        target = origin + goal_handle.steps_goal
 
-        self.speed = goal.velocity_limit
+        self.speed = goal_handle.velocity_limit
 
         self.stepper.setVelocityLimit(int(self.speed * self.speed_factor))
         self.stepper.setTargetPosition(target)
 
 
         while abs(current - target) > 1:
-            feedback = StepControllerFeedback()
+            feedback = StepController.Feedback()
 
             current = self.stepper.getPosition()
 
             # check that preempt has not been requested by the client
-            if self._as.is_preempt_requested() or self.stopped:
+            if goal_handle.is_cancel_requested() or self.stopped:
                 break
 
             # publish the feedback
             feedback.steps_from_start = int(target - current)
-            self._as.publish_feedback(feedback)
+            goal_handle.publish_feedback(feedback)
 
-            rospy.sleep(rospy.Duration(0.1))
+            self.node.create_rate(0.1).sleep()
+
+        # publish result
+        result = StepController.Result()
+        result.done = False
+        if abs(self.speed * self.speed_factor - self.stepper.getVelocity()) <= 0.5:
+            result.done = True
+				
+        if goal_handle.is_cancel_requested() or self.stopped:
+            goal_handle.canceled()
+        else:
+            goal_handle.succeed()
+               
+        return result
 
         # publish result
         result.done = False
@@ -131,5 +155,4 @@ class StepControllerServer:
 
         if self.stopped:
             self.stepper.setVelocityLimit(0)
-            self.stepper.setTargetPosition(self.stepper.getPosition())
 
