@@ -21,9 +21,9 @@ def init_stepper(hub_serial, hub_port, rescale_factor):
     @return: the Stepper()
     """
     stepper = Stepper()
-    stepper.setHubPort(hub_port)
     stepper.setDeviceSerialNumber(hub_serial)
-    stepper.openWaitForAttachment(500)
+    stepper.setHubPort(hub_port)
+    stepper.openWaitForAttachment(20000)
     stepper.setControlMode(StepperControlMode.CONTROL_MODE_RUN)
     stepper.setRescaleFactor(rescale_factor)
     stepper.setEngaged(True)

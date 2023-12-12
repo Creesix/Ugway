@@ -18,14 +18,24 @@ def speed_feedback( feedback):
     
 class TestNode(Node):
   def __init__(self):
-      super().__init__('testing_stepper_lib')
+        super().__init__('testing_stepper_lib')
+
+        #Declare parameter
+        self.declare_parameter('stepper', 3)
+        self.declare_parameter('hub', 723793)
+        self.declare_parameter('ticsPerStep', 32)
+        self.declare_parameter('pasStepper', 1.8)
 
   def run(self):
-        #Declare parameter
-        stepper = self.declare_parameter('stepper', 0).value
-        serialNumber = self.declare_parameter('hub', 723793).value
-        ticsPerStep = self.declare_parameter('ticsPerStep', 32).value
-        step_per_rotation = 360/self.declare_parameter('pasStepper', 1.8).value
+        #Get parameter
+        stepper = self.get_parameter('stepper').get_parameter_value().integer_value
+        serialNumber = self.get_parameter('hub').get_parameter_value().integer_value
+        ticsPerStep = self.get_parameter('ticsPerStep').get_parameter_value().integer_value
+        step_per_rotation = 360/self.get_parameter('pasStepper').get_parameter_value().double_value
+
+        self.get_logger().info('Hello %d!' % stepper)
+        self.get_logger().info('Hello %d!' % serialNumber)
+        self.get_logger().info('Hello %d!' % ticsPerStep)
 
         speed = 100.
 
