@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import rclpy
+import time
 from rclpy.node import Node
 from rclpy.action import ActionServer
 from rclpy.action import CancelResponse
@@ -36,7 +37,7 @@ def init_stepper(hub_serial, hub_port, rescale_factor):
 
     return stepper
 
-class SpeedControllerServer(Node):
+class SpeedControllerServer():
 
     def __init__(self, node, hub_serial, hub_port, action_server_name, rescale_factor=1/32, stop_topic=None, speed_factor_topic=None):
         """
@@ -70,9 +71,9 @@ class SpeedControllerServer(Node):
         self.stepper.setVelocityLimit(0)
 
         # launch the action server
-        self._as = ActionServer(self,
+        self._as = ActionServer(node,
                                 SpeedController,
-                                'speedcontroller',
+                                action_server_name,
                                 execute_callback=self.execute_callback,
                                 goal_callback=self.goal_callback,
                                 cancel_callback=self.cancel_callback)
@@ -80,23 +81,26 @@ class SpeedControllerServer(Node):
         node.get_logger().info(f"[Stepper Lib][{action_server_name}] Initialization complete")
 		
     def goal_callback(self, goal_request):
-        self.node.get_logger().info('Hello %d!' % goal_request)
+        self.node.get_logger().info(f"{goal_request}")
         return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT
 
     def execute_callback(self, goal_handle):
-        self.speed = goal_handle.velocity_limit
+        self.speed = goal_handle.request.velocity_limit
         self.stepper.setVelocityLimit(self.speed * self.speed_factor)
 
-        self.node.get_logger().info('Hello %d!' % goal_handle)
+        self.node.get_logger().info(f"{goal_handle}")
+
 
         while abs(self.speed * self.speed_factor - self.stepper.getVelocity()) > 0.5:
             feedback = SpeedController.Feedback()
 
+            maVar = self.speed * self.speed_factor - self.stepper.getVelocity()
+
             # check that preempt has not been requested by the client
-            if goal_handle.is_cancel_requested() or self.stopped:
+            if goal_handle.is_cancel_requested or self.stopped:
                 break
 
             # publish the feedback
@@ -104,7 +108,8 @@ class SpeedControllerServer(Node):
             feedback.theoretical_velocity = self.stepper.getVelocity() / self.speed_factor
             goal_handle.publish_feedback(feedback)
 
-            self.node.create_rate(0.1).sleep()
+
+            time.sleep(0.1)
 
         # publish result
         result = SpeedController.Result()
@@ -112,7 +117,7 @@ class SpeedControllerServer(Node):
         if abs(self.speed * self.speed_factor - self.stepper.getVelocity()) <= 0.5:
             result.done = True
 				
-        if goal_handle.is_cancel_requested() or self.stopped:
+        if goal_handle.is_cancel_requested or self.stopped:
             goal_handle.canceled()
         else:
             goal_handle.succeed()
