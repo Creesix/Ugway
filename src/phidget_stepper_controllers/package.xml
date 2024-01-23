@@ -7,16 +7,13 @@
   <maintainer email="remipbw@gmail.com">remi</maintainer>
   <license>TODO: License declaration</license>
 
-  <exec_depend>rclpy</exec_depend>
+  <depend>rclpy</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>python3-pytest</test_depend>
 
-
-
   <depend>std_msgs</depend>
   <depend>message_generation</depend>
-  <depend>phidgets_drivers</depend>
   <depend>phidget_stepper_controllers_msgs</depend>
   
 
