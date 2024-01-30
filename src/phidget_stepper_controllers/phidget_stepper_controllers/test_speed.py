@@ -19,6 +19,7 @@ class FibonacciActionClient(Node):
         self.declare_parameter('hub', 723793)
         self.declare_parameter('ticsPerStep', 32)
         self.declare_parameter('pasStepper', 1.8)
+        
         #Get parameter
         stepper = self.get_parameter('stepper').get_parameter_value().integer_value
         serialNumber = self.get_parameter('hub').get_parameter_value().integer_value
@@ -42,6 +43,7 @@ class FibonacciActionClient(Node):
         self.get_logger().info('Sending goal to speed_test')
         return self._action_client.send_goal_async(goal_msg)
     
+
 def main(args=None):
     rclpy.init(args=args)
 
@@ -72,11 +74,11 @@ def main(args=None):
     future = action_client.send_goal(speed)
     rclpy.spin_until_future_complete(action_client, future)
 
-    
+
     
     time.sleep(10)
     speed_factor_msg = Float64()
-    speed_factor_msg.data = 0.5
+    speed_factor_msg.data = 0.1
     speed_factor_topic.publish(speed_factor_msg)
 
     action_client.get_logger().info(f"Stepper here")

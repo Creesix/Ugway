@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-import os
 import rclpy
 import time
+
 from rclpy.node import Node
 from rclpy.action import ActionServer
 from rclpy.action import CancelResponse
 from rclpy.action import GoalResponse
+
+
 from Phidget22.Devices.Log import *
 from Phidget22.LogLevel import *
 

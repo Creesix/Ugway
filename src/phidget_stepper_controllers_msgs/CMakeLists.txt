@@ -13,6 +13,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(action_files
   "action/SpeedController.action"
+  "action/StepController.action"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
