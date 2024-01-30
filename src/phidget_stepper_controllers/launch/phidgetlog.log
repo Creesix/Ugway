@@ -531,3 +531,196 @@
 2024-01-23T17:09:35.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
 2024-01-23T17:09:35.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x489e5640
 2024-01-23T17:09:35.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:11:39.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:11:39.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:11:39.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:11:39.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:11:39.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:11:39.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:11:39.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x87bfe640
+2024-01-23T17:11:39.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:12:21.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:12:21.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:12:21.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:12:21.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:12:21.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:12:21.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:12:21.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x7995b640
+2024-01-23T17:12:21.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:13:47.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:13:47.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:13:47.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:13:47.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:13:47.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:13:47.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:13:47.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x504dc640
+2024-01-23T17:13:47.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:16:44.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:16:44.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:16:44.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:16:44.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:16:44.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:16:44.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:16:44.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:16:44.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0xd1eb4640
+2024-01-23T17:18:45.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:18:45.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:18:45.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:18:45.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:18:45.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:18:45.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:18:45.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x26506640
+2024-01-23T17:18:45.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:19:52.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:19:52.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:19:52.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:19:52.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:19:52.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:19:52.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:19:52.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x8bfff640
+2024-01-23T17:19:52.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:20:39.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:20:39.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:20:39.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:20:39.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:20:39.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:20:39.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:20:39.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0xec993640
+2024-01-23T17:20:39.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:21:32.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:21:32.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:21:32.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:21:32.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:21:32.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:21:32.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:21:32.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0xb08e2640
+2024-01-23T17:21:32.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:35:11.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:35:11.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:35:11.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:35:11.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:35:11.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:35:11.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:35:11.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x62140640
+2024-01-23T17:35:11.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:40:38.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:40:39.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: ReadThread exiting normally (signaled by Phidget_close)
+2024-01-23T17:40:39.000  <Info> phidget22[deviceDetach()] : (Detach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:40:39.000  <Info> phidget22[deviceDetach()] : (Detach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:40:39.000  <Info> phidget22usb[PhidgetUSBUninit()] : Deinitializing libusb
+2024-01-23T17:40:49.000  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 18:25:09                       *
+	* Release 1.17 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-23T17:40:49.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-23T17:40:49.000  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/5
+2024-01-23T17:40:49.000  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-23T17:40:49.000  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-23T17:40:49.000  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-23T17:40:49.000  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0xbb7fd640
+2024-01-23T17:40:49.000  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:19:47.363  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.18 - Built Jan 23 2024 21:53:03                       *
+	* Release 1.18 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-30T14:19:47.364  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-30T14:19:47.365  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/6
+2024-01-30T14:19:47.367  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:19:47.368  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:19:47.368  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-30T14:19:47.368  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:19:47.368  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x4b7fd640
+2024-01-30T14:21:07.024  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:21:07.524  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: ReadThread exiting normally (signaled by Phidget_close)
+2024-01-30T14:21:07.530  <Info> phidget22[deviceDetach()] : (Detach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:21:07.530  <Info> phidget22[deviceDetach()] : (Detach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:21:07.530  <Info> phidget22usb[PhidgetUSBUninit()] : Deinitializing libusb
+2024-01-30T14:21:31.733  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.18 - Built Jan 23 2024 21:53:03                       *
+	* Release 1.18 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-30T14:21:31.733  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-30T14:21:31.735  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/6
+2024-01-30T14:21:31.737  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:21:31.737  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:21:31.738  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-30T14:21:31.738  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x71ebb640
+2024-01-30T14:21:31.738  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:24:53.515  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:24:54.015  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: ReadThread exiting normally (signaled by Phidget_close)
+2024-01-30T14:24:54.023  <Info> phidget22[deviceDetach()] : (Detach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:24:54.023  <Info> phidget22[deviceDetach()] : (Detach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:24:54.024  <Info> phidget22usb[PhidgetUSBUninit()] : Deinitializing libusb
+2024-01-30T14:25:01.879  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.18 - Built Jan 23 2024 21:53:03                       *
+	* Release 1.18 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-30T14:25:01.880  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-30T14:25:01.881  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/6
+2024-01-30T14:25:01.884  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:25:01.884  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:25:01.884  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-30T14:25:01.884  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x5d17f640
+2024-01-30T14:25:01.884  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:25:30.765  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:25:31.265  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: ReadThread exiting normally (signaled by Phidget_close)
+2024-01-30T14:25:31.273  <Info> phidget22[deviceDetach()] : (Detach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:25:31.273  <Info> phidget22[deviceDetach()] : (Detach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:25:31.273  <Info> phidget22usb[PhidgetUSBUninit()] : Deinitializing libusb
+2024-01-30T14:25:37.316  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.18 - Built Jan 23 2024 21:53:03                       *
+	* Release 1.18 - Linux (64-bit)                                               *
+	*******************************************************************************
+2024-01-30T14:25:37.316  <Info> phidget22usb[PhidgetUSBScanDevices()] : Initializing libusb
+2024-01-30T14:25:37.318  <Info> phidget22usb[PhidgetUSBScanDevices()] : New Phidget found in PhidgetUSBBuildList: 3/6
+2024-01-30T14:25:37.320  <Info> phidget22[deviceAttach()] : (Attach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:25:37.320  <Info> phidget22[deviceAttach()] : (Attach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:25:37.321  <Info> phidget22[HandleEventsThreadFunction()] : Failed to increase priority of USB Handle Events thread: 0x01 - Operation not permitted
+2024-01-30T14:25:37.321  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: USB read thread started: 0x527fa640
+2024-01-30T14:25:37.321  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:26:06.594  <Info> phidget22vint[PhidgetHubDevice_setPortMode()] : Setting Port: 1 mode to VINT on HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:26:07.094  <Info> phidget22[PhidgetUSBReadThreadFunction()] : HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793: ReadThread exiting normally (signaled by Phidget_close)
+2024-01-30T14:26:07.106  <Info> phidget22[deviceDetach()] : (Detach) STC1005 (4A Stepper Phidget) v110 -> HUB0002 Port:1 S/N:723793
+2024-01-30T14:26:07.106  <Info> phidget22[deviceDetach()] : (Detach) HUB0002 (6-Port USB VINT Hub Phidget) v100 S/N:723793
+2024-01-30T14:26:07.106  <Info> phidget22usb[PhidgetUSBUninit()] : Deinitializing libusb

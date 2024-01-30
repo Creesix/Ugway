@@ -59,9 +59,9 @@ class SpeedControllerServer():
 
         # listen to topics
         if stop_topic is not None:
-            self.stop_topic  = node.create_subscription(Bool, 'stop_topic', self.stop_callback, 1)
+            self.stop_topic  = node.create_subscription(Bool, 'stop', self.stop_callback, 1)
         if speed_factor_topic is not None:
-            self.speed_factor_topic  = node.create_subscription(Float64, 'speed_factor_topic', self.speed_callback, 1)
+            self.speed_factor_topic  = node.create_subscription(Float64, 'speed_factor', self.speed_callback, 1)
 
         # init stepper
 
@@ -131,6 +131,7 @@ class SpeedControllerServer():
             self.stepper.setVelocityLimit(int(self.speed * self.speed_factor))
 
     def stop_callback(self, msg):
+        
         self.stopped = msg.data
 
         if self.stopped:
