@@ -71,6 +71,8 @@ def main(args=None):
         f"stepper should turn at {step_per_rotation / speed} sec / revolution and stop because of the stop_topic in 0,5s.")
     future = action_client.send_goal(speed)
     rclpy.spin_until_future_complete(action_client, future)
+
+    
     
     time.sleep(10)
     speed_factor_msg = Float64()
