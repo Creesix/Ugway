@@ -1,0 +1,4 @@
+pwm_pins:
+  - pin: 17
+  - pin: 18
+  - pin: 19
