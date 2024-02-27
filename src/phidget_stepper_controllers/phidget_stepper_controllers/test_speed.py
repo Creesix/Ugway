@@ -9,10 +9,10 @@ from std_msgs.msg import Float64, Bool
 import time
 
 
-class FibonacciActionClient(Node):
+class SimpleActionClient(Node):
 
     def __init__(self):
-        super().__init__('fibonacci_action_client')
+        super().__init__('simple_action_client')
         
         #Declare parameter
         self.declare_parameter('stepper', 3)
@@ -42,19 +42,18 @@ class FibonacciActionClient(Node):
 
         self.get_logger().info('Sending goal to speed_test')
         return self._action_client.send_goal_async(goal_msg)
-    
 
 def main(args=None):
     rclpy.init(args=args)
 
-    action_client = FibonacciActionClient()
+    action_client = SimpleActionClient()
 
     stop_topic = action_client.create_publisher(Bool, 'stop', 10)
     speed_factor_topic = action_client.create_publisher(Float64, 'speed_factor', 10)
 
     step_per_rotation = 360/action_client.get_parameter('pasStepper').get_parameter_value().double_value
     
-    speed = 400.
+    speed = 100.
 
     # ==== TEST 1
     future = action_client.send_goal(speed)
@@ -78,7 +77,7 @@ def main(args=None):
     
     time.sleep(10)
     speed_factor_msg = Float64()
-    speed_factor_msg.data = 0.1
+    speed_factor_msg.data = 0.001
     speed_factor_topic.publish(speed_factor_msg)
 
     action_client.get_logger().info(f"Stepper here")

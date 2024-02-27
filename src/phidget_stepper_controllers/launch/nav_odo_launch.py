@@ -15,7 +15,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='phidget_stepper_controllers',
-            executable='test_step',
+            executable='test_speed',
             name='testing_stepper_lib',
             parameters=[config]
         ),
