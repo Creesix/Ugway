@@ -106,29 +106,6 @@ class TrajectoryActionServer(Node):
         angle -= ((angle + pi) // (2 * pi)) * 2 * pi
 
         return dist, angle
-    
-
-    def __calculate_dist_and_angle__(self, traj_dir=1):
-        """
-        Calculate the distance and angle to the next point in the trajectory
-
-        @param traj_dir: the direction use by the robot (> 0 => forward, < 0 => backward)
-        @return:
-        """
-
-        # calculate path
-        dist = sqrt((self.x1 - self.x2) * (self.x1 - self.x2) + (self.y1 - self.y2) * (self.y1 - self.y2))
-        self.angle2 = atan2(self.y2 - self.y1, self.x2 - self.x1)
-
-        if traj_dir < 0:
-            self.angle2 += pi
-            dist = -dist
-        angle = self.angle2 - self.angle1
-
-        # make sure - pi <= angle <= pi
-        angle -= ((angle + pi) // (2 * pi)) * 2 * pi
-
-        return dist, angle
 
     def __move__(self, dist, angle, traj_dir):
         goal_msg = WheelsDistance.Goal()
