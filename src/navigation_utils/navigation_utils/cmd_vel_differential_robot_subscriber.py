@@ -11,24 +11,24 @@ from phidget_stepper_controllers.speed_controller_server import SpeedControllerS
 
 from geometry_msgs.msg import Twist, Pose
 
-from utils import *
+from navigation_utils.utils import *
 
 class CmdVelSubscriber(Node):
 
     def __init__(self):
-        assert self.declare_parameter("navigation_hub")
-        assert self.declare_parameter("left_wheel_stepper")
-        assert self.declare_parameter("right_wheel_stepper")
-        assert self.declare_parameter("entraxe")
-        assert self.declare_parameter("wheel_radius")
-        assert self.declare_parameter("step_count")
-        assert self.declare_parameter("stop_topic")
-        assert self.declare_parameter("speed_factor")
-        assert self.declare_parameter("tics_per_step")
-        assert self.declare_parameter("encoder_tics_count")
-        assert self.declare_parameter("left_wheel_encoder")
-        assert self.declare_parameter("right_wheel_encoder")
-        assert self.declare_parameter("odom_period")
+        assert self.declare_parameter("navigation_hub", 723793)
+        assert self.declare_parameter("left_wheel_stepper", 0)
+        assert self.declare_parameter("right_wheel_stepper", 1)
+        assert self.declare_parameter("entraxe", 18.44)
+        assert self.declare_parameter("wheel_radius", 4.06)
+        assert self.declare_parameter("step_count", 200)
+        assert self.declare_parameter("stop_topic", "stop_all")
+        assert self.declare_parameter("speed_factor", "speed_factor")
+        assert self.declare_parameter("tics_per_step", 32)
+        assert self.declare_parameter("encoder_tics_count", 1200)
+        assert self.declare_parameter("left_wheel_encoder", 2)
+        assert self.declare_parameter("right_wheel_encoder", 3)
+        assert self.declare_parameter("odom_period", 0.25)
 
 
         # ===== get the param and compute all the values needed
@@ -62,7 +62,6 @@ class CmdVelSubscriber(Node):
         print("[cmd_vel] All params init")
 
         # ==== init steppers and associated action server
-
 
         self.left_stepper_obj = SpeedControllerServer(hub_serial,
                                                  self.get_parameter("left_wheel_stepper").get_parameter_value().integer_value,

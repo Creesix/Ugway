@@ -6,7 +6,7 @@ from Phidget22.Devices.Encoder import *
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
 
-import tf_conversions
+import tf_transformations
 import tf2_ros
 
 def init_encoder(hub_serial, hub_port, data_interval):
@@ -73,7 +73,7 @@ def broadcast_associated_tf(node, pos):
     t.transform.translation.y = pos.position.y
     t.transform.translation.z = 0.0
 
-    q = tf_conversions.transformations.quaternion_from_euler(0, 0, pos.orientation.z)
+    q = tf_transformations.transformations.quaternion_from_euler(0, 0, pos.orientation.z)
     t.transform.rotation.x = q[0]
     t.transform.rotation.y = q[1]
     t.transform.rotation.z = q[2]
@@ -96,7 +96,7 @@ def get_odom_msg(node, pos):
     msg.pose.pose.position.y = pos.position.y
     msg.pose.pose.position.z = 0
 
-    q = tf_conversions.transformations.quaternion_from_euler(0, 0, pos.orientation.z)
+    q = tf_transformations.transformations.quaternion_from_euler(0, 0, pos.orientation.z)
     msg.pose.pose.orientation.x = q[0]
     msg.pose.pose.orientation.y = q[1]
     msg.pose.pose.orientation.z = q[2]

@@ -1,4 +1,4 @@
-/**:
+/test_speed:
   ros__parameters:
     wheelRadius: 4.06 # en cm
     pasStepper: 1.8 # degrés par step
