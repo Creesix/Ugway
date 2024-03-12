@@ -5,6 +5,7 @@ from rclpy.action import ActionClient
 from rclpy.node import Node
 
 import math
+import time
 
 from phidget_stepper_controllers_msgs.action import SpeedController
 from phidget_stepper_controllers.speed_controller_server import SpeedControllerServer
@@ -16,29 +17,30 @@ from navigation_utils.utils import *
 class CmdVelSubscriber(Node):
 
     def __init__(self):
-        assert self.declare_parameter("navigation_hub", 723793)
-        assert self.declare_parameter("left_wheel_stepper", 0)
-        assert self.declare_parameter("right_wheel_stepper", 1)
-        assert self.declare_parameter("entraxe", 18.44)
-        assert self.declare_parameter("wheel_radius", 4.06)
-        assert self.declare_parameter("step_count", 200)
-        assert self.declare_parameter("stop_topic", "stop_all")
-        assert self.declare_parameter("speed_factor", "speed_factor")
-        assert self.declare_parameter("tics_per_step", 32)
-        assert self.declare_parameter("encoder_tics_count", 1200)
-        assert self.declare_parameter("left_wheel_encoder", 2)
-        assert self.declare_parameter("right_wheel_encoder", 3)
-        assert self.declare_parameter("odom_period", 0.25)
+        super().__init__('simple_cmdvel_sub')
 
+        assert self.declare_parameter('left_wheel_stepper', 0)
+        assert self.declare_parameter('right_wheel_stepper', 1)
+        assert self.declare_parameter('entraxe', 18.44)
+        assert self.declare_parameter('wheel_radius', 4.06)
+        assert self.declare_parameter('step_count', 200)
+        assert self.declare_parameter('encoder_tics_count', 1200)
+        assert self.declare_parameter('left_wheel_encoder', 2)
+        assert self.declare_parameter('right_wheel_encoder', 3)
+        assert self.declare_parameter('navigation_hub', 723793)
+        assert self.declare_parameter('odom_period', 0.5)
+        assert self.declare_parameter('stop_topic', "stop")
+        assert self.declare_parameter('speed_factor',"speed_factor")
+        assert self.declare_parameter('tics_per_step', 32)
 
         # ===== get the param and compute all the values needed
 
-        hub_serial = self.get_parameter("navigation_hub").get_parameter_value().integer_value
+        hub_serial = self.get_parameter('navigation_hub').get_parameter_value().integer_value
 
         # for steppers
-        stop_topic = self.get_parameter("stop_topic").get_parameter_value().string_value if self.declare_parameter("stop_topic") else None
-        speed_factor = self.get_parameter("speed_factor").get_parameter_value().string_value if self.declare_parameter("speed_factor") else None
-        tics_per_step = self.get_parameter("tics_per_step").get_parameter_value().interger_value if self.declare_parameter("tics_per_step") else 1/32
+        stop_topic = self.get_parameter('stop_topic').get_parameter_value().string_value
+        speed_factor = self.get_parameter('speed_factor').get_parameter_value().string_value
+        tics_per_step = self.get_parameter('tics_per_step').get_parameter_value().integer_value
         step_count = self.get_parameter('step_count').get_parameter_value().double_value # steps per rotation
 
         # geometry constraints
@@ -56,28 +58,36 @@ class CmdVelSubscriber(Node):
             assert self.get_parameter('left_wheel_encoder').get_parameter_value().integer_value
             assert self.get_parameter('right_wheel_encoder').get_parameter_value().integer_value
 
-        self.encoder_tics_count = self.get_parameter('encoder_tics_count').get_parameter_value().integer_value if self.declare_parameter("encoder_tics_count") else None
-        odom_period = self.get_parameter('odom_period').get_parameter_value().double_value if self.declare_parameter("odom_period") else 500
+        self.encoder_tics_count = self.get_parameter('encoder_tics_count').get_parameter_value().integer_value
+        odom_period = self.get_parameter('odom_period').get_parameter_value().double_value
 
         print("[cmd_vel] All params init")
 
         # ==== init steppers and associated action server
+        time.sleep(0.5)
 
-        self.left_stepper_obj = SpeedControllerServer(hub_serial,
-                                                 self.get_parameter("left_wheel_stepper").get_parameter_value().integer_value,
+        self.left_stepper_obj = SpeedControllerServer(self, hub_serial,
+                                                 self.get_parameter('left_wheel_stepper').get_parameter_value().integer_value,
                                                  "left_wheel",
                                                  1 / tics_per_step,
                                                  stop_topic,
                                                  speed_factor)
+        time.sleep(0.5)
+        
         self.left_stepper_as = ActionClient(self, SpeedController, 'left_wheel')
 
-        self.right_stepper_obj = SpeedControllerServer(hub_serial,
-                                                 self.get_parameter("right_wheel_stepper").get_parameter_value().integer_value,
+        time.sleep(0.5)
+
+        self.right_stepper_obj = SpeedControllerServer(self, hub_serial,
+                                                 self.get_parameter('right_wheel_stepper').get_parameter_value().integer_value,
                                                  "right_wheel",
                                                  1 / tics_per_step,
                                                  stop_topic,
                                                  speed_factor)
+        time.sleep(0.5)
         self.right_stepper_as = ActionClient(self, SpeedController, 'right_wheel')
+
+        time.sleep(0.5)
 
         print("[cmd_vel] All steppers started")
 
@@ -87,10 +97,13 @@ class CmdVelSubscriber(Node):
 
             # init encoders
             self.left_encoder = init_encoder(hub_serial,
-                                             self.get_parameter('left_wheel_encoder').get_value(),
+                                             self.get_parameter('left_wheel_encoder').get_value().integer_value,
                                              int(odom_period*1000/5))
+            
+            time.sleep(0.5)
+
             self.right_encoder = init_encoder(hub_serial,
-                                              self.get_parameter('right_wheel_encoder').get_value(),
+                                              self.get_parameter('right_wheel_encoder').get_value().integer_value,
                                               int(odom_period*1000/5))
 
             # the initial position and speed
@@ -138,6 +151,12 @@ def main(args=None):
 
     # Create an instance of your custom node
     cmd_vel_subscriber = CmdVelSubscriber()
+
+    need = {linear: {x: 2.0, y: 3.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}
+
+    # ==== TEST 1
+    future = cmd_vel_subscriber.cmd_callback(need)
+    rclpy.spin_until_future_complete(cmd_vel_subscriber, future)
 
     # Spin the node so its callbacks can be called
     rclpy.spin(cmd_vel_subscriber)

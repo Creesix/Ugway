@@ -1,4 +1,4 @@
-/cmd_vel_differential_robot_subscriber:
+/**:
   ros__parameters:
     navigation_hub: 723793 # serial number du hub
     left_wheel_stepper: 0   # hub phidget du stepper gauche

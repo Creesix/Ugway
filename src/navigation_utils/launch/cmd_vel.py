@@ -9,7 +9,7 @@ def generate_launch_description():
     config = os.path.join(
       get_package_share_directory('navigation_utils'),
       'config',
-      'default_params.yaml'
+      'defaultparams.yaml'
     )
 
     return LaunchDescription([
