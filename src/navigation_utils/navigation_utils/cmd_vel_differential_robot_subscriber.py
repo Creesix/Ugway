@@ -61,7 +61,7 @@ class CmdVelSubscriber(Node):
         self.encoder_tics_count = self.get_parameter('encoder_tics_count').get_parameter_value().integer_value
         odom_period = self.get_parameter('odom_period').get_parameter_value().double_value
 
-        print("[cmd_vel] All params init")
+        self.get_logger().info(f"[cmd_vel] All params init")
 
         # ==== init steppers and associated action server
         time.sleep(0.5)
