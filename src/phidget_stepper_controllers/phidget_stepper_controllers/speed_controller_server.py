@@ -27,7 +27,7 @@ def init_stepper(hub_serial, hub_port, rescale_factor):
     @return: the Stepper()
     """
 
-    Log.enable(LogLevel.PHIDGET_LOG_INFO, "phidgetlog.log")
+    #Log.enable(LogLevel.PHIDGET_LOG_INFO, "phidgetlog.log")
 
     stepper = Stepper()
     stepper.setHubPort(hub_port)
@@ -52,6 +52,7 @@ class SpeedControllerServer():
         @param stop_topic: (optional) the name of the stop topic
         @param speed_factor_topic: (optional) the name of the speed factor topic
         """
+
         # default values
         self.speed_factor = 1
         self.speed = 0

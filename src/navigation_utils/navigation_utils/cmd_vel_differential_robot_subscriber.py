@@ -64,7 +64,6 @@ class CmdVelSubscriber(Node):
         self.get_logger().info(f"[cmd_vel] All params init")
 
         # ==== init steppers and associated action server
-        time.sleep(0.5)
 
         self.left_stepper_obj = SpeedControllerServer(self, hub_serial,
                                                  self.get_parameter('left_wheel_stepper').get_parameter_value().integer_value,
@@ -72,11 +71,8 @@ class CmdVelSubscriber(Node):
                                                  1 / tics_per_step,
                                                  stop_topic,
                                                  speed_factor)
-        time.sleep(0.5)
         
         self.left_stepper_as = ActionClient(self, SpeedController, 'left_wheel')
-
-        time.sleep(0.5)
 
         self.right_stepper_obj = SpeedControllerServer(self, hub_serial,
                                                  self.get_parameter('right_wheel_stepper').get_parameter_value().integer_value,
@@ -84,12 +80,9 @@ class CmdVelSubscriber(Node):
                                                  1 / tics_per_step,
                                                  stop_topic,
                                                  speed_factor)
-        time.sleep(0.5)
+
         self.right_stepper_as = ActionClient(self, SpeedController, 'right_wheel')
-
-        time.sleep(0.5)
-
-        print("[cmd_vel] All steppers started")
+        
 
         if self.odom_activate:
             # init the odom publisher
@@ -97,18 +90,17 @@ class CmdVelSubscriber(Node):
 
             # init encoders
             self.left_encoder = init_encoder(hub_serial,
-                                             self.get_parameter('left_wheel_encoder').get_value().integer_value,
+                                             self.get_parameter('left_wheel_encoder').get_parameter_value().integer_value,
                                              int(odom_period*1000/5))
             
-            time.sleep(0.5)
 
             self.right_encoder = init_encoder(hub_serial,
-                                              self.get_parameter('right_wheel_encoder').get_value().integer_value,
+                                              self.get_parameter('right_wheel_encoder').get_parameter_value().integer_value,
                                               int(odom_period*1000/5))
 
             # the initial position and speed
             self.wheels_pos = (-self.left_encoder.getPosition(), self.right_encoder.getPosition())
-            self.timer = self.create_timer(odom_period, self.timer_callback)
+            #self.timer = self.create_timer(odom_period, self.timer_callback)
 
             # the position (0, 0)
             self.pos = Pose()
@@ -121,29 +113,26 @@ class CmdVelSubscriber(Node):
 
         self.get_logger().info('[cmd_vel] Ready')
 
-
-def cmd_callback(self, msg):
+    def cmd_callback(self, msg):
+        self.get_logger().info(f"[cmd_callback Lib][{msg}] Initialization complete")
         self.last_cmd_vel = msg  # update the last cmd_vel received
 
         if not self.cmd_vel_canceled:  # if the action server weren't canceled
             self.cmd_vel_canceled = True  # cancel the stepper action
 
-            # wait for server to cancel, and cmd_vel
-            if self.right_stepper_as.get_state() == SpeedControllerServer.GoalStatus.STATUS_EXECUTING:
-                self.right_stepper_as.cancel_goal()
-
-            if self.left_stepper_as.get_state() == SpeedControllerServer.GoalStatus.STATUS_EXECUTING:
-                self.left_stepper_as.cancel_goal()
-
             right_goal = SpeedController()
             right_goal.velocity_limit = (self.last_cmd_vel.linear.x + self.last_cmd_vel.angular.z
-                                         * self.get_parameter('entraxe').get_value()/2) * self.get_parameter('step_per_meter').get_value()
+                                            * self.get_parameter('entraxe').get_parameter_value().double_value/2) * self.step_per_meter
             left_goal = SpeedController()
             left_goal.velocity_limit = -(self.last_cmd_vel.linear.x - self.last_cmd_vel.angular.z
-                                         * self.get_parameter('entraxe').get_value()/2) * self.get_parameter('step_per_meter').get_value()
+                                            * self.get_parameter('entraxe').get_parameter_value().double_value/2) * self.step_per_meter
 
-            self.right_stepper_as.send_goal(right_goal)
-            self.left_stepper_as.send_goal(left_goal)
+            self.right_stepper_as.wait_for_server()
+            self.left_stepper_as.wait_for_server()
+
+            self.right_stepper_as.send_goal_async(right_goal)
+            self.left_stepper_as.send_goal_async(left_goal)
+            
             self.cmd_vel_canceled = False
 
 def main(args=None):
@@ -151,12 +140,6 @@ def main(args=None):
 
     # Create an instance of your custom node
     cmd_vel_subscriber = CmdVelSubscriber()
-
-    need = {linear: {x: 2.0, y: 3.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}
-
-    # ==== TEST 1
-    future = cmd_vel_subscriber.cmd_callback(need)
-    rclpy.spin_until_future_complete(cmd_vel_subscriber, future)
 
     # Spin the node so its callbacks can be called
     rclpy.spin(cmd_vel_subscriber)
