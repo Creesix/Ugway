@@ -35,26 +35,22 @@ class TrajectoryActionServer(Node):
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
-        # Parameters
-        self.declare_parameters(namespace='',
-                                parameters=[
-                                    ('use_odom', False),
-                                    ('entraxe', 0.0),
-                                    ('trajectory_goal_error', 0.0),
-                                    ('is_left_side', True),
-                                    ('y_depart', 0.0),
-                                    ('x_depart', 0.0),
-                                    ('angle_depart', 0.0)
-                                ])
+        assert self.declare_parameter('use_odom', False)
+        assert self.declare_parameter('entraxe', 0.0)
+        assert self.declare_parameter('trajectory_goal_error', 0.0)
+        assert self.declare_parameter('is_left_side', True)
+        assert self.declare_parameter('y_depart', 0.0)
+        assert self.declare_parameter('x_depart', 0.0)
+        assert self.declare_parameter('angle_depart', 0.0)
 
-        self.use_odom = self.get_parameter('use_odom').value
-        self.entraxe = self.get_parameter('entraxe').value / 100
-        self.trajectory_goal_error = self.get_parameter('trajectory_goal_error').value
+        self.use_odom = self.get_parameter('use_odom').get_parameter_value().bool_value
+        self.entraxe = self.get_parameter('entraxe').get_parameter_value().double_value / 100
+        self.trajectory_goal_error = self.get_parameter('trajectory_goal_error').get_parameter_value().double_value
 
-        self.is_left_side = self.get_parameter('is_left_side').value
-        self.y_depart = self.get_parameter('y_depart').value
-        self.x_depart = -self.get_parameter('x_depart').value if not self.is_left_side else self.get_parameter('x_depart').value
-        self.angle_depart = np.pi - self.get_parameter('angle_depart').value if not self.is_left_side else self.get_parameter('angle_depart').value
+        self.is_left_side = self.get_parameter('is_left_side').get_parameter_value().bool_value
+        self.y_depart = self.get_parameter('y_depart').get_parameter_value().double_value
+        self.x_depart = -self.get_parameter('x_depart').get_parameter_value().double_value if not self.is_left_side else self.get_parameter('x_depart').get_parameter_value().double_value
+        self.angle_depart = np.pi - self.get_parameter('angle_depart').get_parameter_value().double_value if not self.is_left_side else self.get_parameter('angle_depart').get_parameter_value().double_value
 
         self.get_logger().info('[Trajectory Server] Ready')
 
@@ -152,6 +148,54 @@ class TrajectoryActionServer(Node):
             rclpy.spin_until_future_complete(self.node, result_future)
             result = result_future.result()
             self.get_logger().info('Result received')
+
+    def execute_cb(self, trajectory):
+        success = True
+        n = len(trajectory.trajX)
+
+        # take symmetrical traj if necessary
+        trajectory.trajX = [trajX if self.is_left_side else - trajX for trajX in trajectory.trajX]
+
+        self.get_logger().info(f"[Trajectory Server] New trajectory received ({n} points)")
+        for i in range(n):
+
+            # get the starting position of the trajectory
+            self.__set_starting_pos__(self.use_odom)
+
+            # the next pos to go
+            self.x2 = trajectory.trajX[i]
+            self.y2 = trajectory.trajY[i]
+            traj_dir = trajectory.trajDir[i] # forward/backward
+
+            # calculate dist and angle to (x2, y2)
+            dist, angle = self.__calculate_dist_and_angle__(traj_dir)
+
+            # move (first rotate and move linearly)
+            self.__move__(dist, angle, traj_dir)
+
+            self._feedback.percentage = (i+1)/n if self.use_odom else i/n # if the odom is activated there one more correction point
+            self.server.publish_feedback(self._feedback)
+
+        # get the starting position of the trajectory
+        self.__set_starting_pos__(True)
+        dist, angle = self.__calculate_dist_and_angle__()
+        self.get_logger().info(f"[Trajectory Server] Distance from objective {dist} m {angle/pi*180} °")
+
+        if self.use_odom and dist > self.trajectory_goal_error:
+            self.get_logger().info(f"[Trajectory Server] The error is too important ! Using odom to correct")
+            self.__move__(dist, angle, 1)
+
+            self._feedback.percentage = 1
+            self.server.publish_feedback(self._feedback)
+
+        self.get_logger().info("[Trajectory Server] Trajectory finished")
+        
+        if success:
+            self._result.done = True
+            self.server.set_succeeded(self._result)
+        else:
+            self._result.done = False
+            self.server.set_aborted(self._result)
 
 def main(args=None):
     rclpy.init(args=args)
