@@ -41,13 +41,15 @@ class CmdVelSubscriber(Node):
         stop_topic = self.get_parameter('stop_topic').get_parameter_value().string_value
         speed_factor = self.get_parameter('speed_factor').get_parameter_value().string_value
         tics_per_step = self.get_parameter('tics_per_step').get_parameter_value().integer_value
-        step_count = self.get_parameter('step_count').get_parameter_value().double_value # steps per rotation
+        step_count = self.get_parameter('step_count').get_parameter_value().integer_value # steps per rotation
 
         # geometry constraints
         self.entraxe = self.get_parameter('entraxe').get_parameter_value().double_value / 100  # meters
         self.wheel_radius = self.get_parameter('wheel_radius').get_parameter_value().double_value / 100  # meters
         self.step_per_meter = 1 / (2 * math.pi * self.wheel_radius) * step_count
 
+        self.get_logger().info(f"[cmd_callback Lib][{self.wheel_radius}] Initialization complete")
+        self.get_logger().info(f"[cmd_callback Lib][{step_count}] Initialization complete")
         # for encoders
         self.odom_activate = self.get_parameter('encoder_tics_count').get_parameter_value().integer_value\
                         or self.get_parameter('left_wheel_encoder').get_parameter_value().integer_value\
@@ -114,16 +116,18 @@ class CmdVelSubscriber(Node):
         self.get_logger().info('[cmd_vel] Ready')
 
     def cmd_callback(self, msg):
-        self.get_logger().info(f"[cmd_callback Lib][{msg}] Initialization complete")
         self.last_cmd_vel = msg  # update the last cmd_vel received
 
         if not self.cmd_vel_canceled:  # if the action server weren't canceled
             self.cmd_vel_canceled = True  # cancel the stepper action
 
-            right_goal = SpeedController()
+            self.get_logger().info(f"[cmd_callback Lib][{msg}] Initialization complete")
+            self.get_logger().info(f"[cmd_callback Lib][{self.step_per_meter}] Initialization complete")
+
+            right_goal = SpeedController.Goal()
             right_goal.velocity_limit = (self.last_cmd_vel.linear.x + self.last_cmd_vel.angular.z
                                             * self.get_parameter('entraxe').get_parameter_value().double_value/2) * self.step_per_meter
-            left_goal = SpeedController()
+            left_goal = SpeedController.Goal()
             left_goal.velocity_limit = -(self.last_cmd_vel.linear.x - self.last_cmd_vel.angular.z
                                             * self.get_parameter('entraxe').get_parameter_value().double_value/2) * self.step_per_meter
 
@@ -132,7 +136,7 @@ class CmdVelSubscriber(Node):
 
             self.right_stepper_as.send_goal_async(right_goal)
             self.left_stepper_as.send_goal_async(left_goal)
-            
+
             self.cmd_vel_canceled = False
 
 def main(args=None):
