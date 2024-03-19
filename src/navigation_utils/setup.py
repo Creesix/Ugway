@@ -11,6 +11,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'config'), ['config/exampletrajectories.yaml']),
         (os.path.join('share', package_name, 'config'), ['config/defaultparams.yaml'])
     ],
     install_requires=['setuptools'],
@@ -22,7 +23,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'cmd_vel_differential_robot_subscriber = navigation_utils.cmd_vel_differential_robot_subscriber:main'
+            'cmd_vel_differential_robot_subscriber = navigation_utils.cmd_vel_differential_robot_subscriber:main',
+            'distance_differential_robot_controller = navigation_utils.distance_differential_robot_controller:main',
+            'trajectory_action_server = navigation_utils.trajectory_action_server:main'
         ],
     },
 )
