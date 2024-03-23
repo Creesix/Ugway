@@ -1,6 +1,6 @@
 # Description de la repo
 
-Cette repository permet de concentrer l'avancement du robot en ROS2 de ARES pour la CDRF
+Cette repository permet de concentrer l'avancement du robot en ROS2 de Ares pour la CDFR.
 
 Structure des packages ROS2 (_si le graphe ne s'affiche pas utiliser [mermaid](https://mermaid.live)_):
 
