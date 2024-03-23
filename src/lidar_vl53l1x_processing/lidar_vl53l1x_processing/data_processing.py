@@ -86,7 +86,7 @@ class LidarNode(Node):
     def __init__(self):
         super().__init__('lidar_node')
         self.publisher_ = self.create_publisher(Int32, 'lidar_data', 10)
-        timer_period = 0.5  # seconds
+        timer_period = 0.2  # seconds
         self.timer = self.create_timer(timer_period, self.publish_lidar_data)
 
         #Opening serial communication
@@ -101,7 +101,13 @@ class LidarNode(Node):
         distances = [distance[1] for distance in processed_data.measure]
         min_distance = min(distances)
 
-        #Actually unused but may be useful 
+        threshold = 500
+        if 75 <= min_distance <= threshold:
+                information = 1
+        else:
+                information = 0
+
+        #Actually unused but may be useful
         #For knowing if the obstacle is in front of the robot or behind
         min_distance_index = distances.index(min_distance)
 
@@ -109,8 +115,8 @@ class LidarNode(Node):
         msg = Int32()
         msg.data = min_distance
         self.publisher_.publish(msg)
-        self.get_logger().info('Minimal distance: "%d"' % msg.data)
-    
+        self.get_logger().info("Minimal distance: %d, Information : %d" % (msg.data, information))
+
 def main(args=None):
     rclpy.init(args=args)
 
