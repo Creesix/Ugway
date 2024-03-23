@@ -1,0 +1,13 @@
+#goal
+float64 velocity_limit
+float64 distance_left
+float64 distance_right
+---
+#result
+float64 done_distance_left
+float64 done_distance_right
+bool done
+---
+#feedback
+float64 distance_left_from_start
+float64 distance_right_from_start

@@ -130,7 +130,7 @@ Peut-être utile, mais aura le gros désavantage de "condamner" un hub phidgets 
 
 # Authors
 
-- Sébastien K. (2024) [Contact discord](Séb#4135)
+- Rémi WEIDLE | Contact : remi.weidle@ensea.fr
 
 # Sources
 

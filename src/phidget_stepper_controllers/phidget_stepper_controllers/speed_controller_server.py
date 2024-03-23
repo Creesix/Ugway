@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-
 import rclpy
+import time
+
+from rclpy.node import Node
 from rclpy.action import ActionServer
 from rclpy.action import CancelResponse
 from rclpy.action import GoalResponse
+
+
+from Phidget22.Devices.Log import *
+from Phidget22.LogLevel import *
 
 from Phidget22.Phidget import *
 from Phidget22.Devices.Stepper import *
@@ -20,17 +26,20 @@ def init_stepper(hub_serial, hub_port, rescale_factor):
     @param hub_port: the port on which the stepper is
     @return: the Stepper()
     """
+
+    #Log.enable(LogLevel.PHIDGET_LOG_INFO, "phidgetlog.log")
+
     stepper = Stepper()
     stepper.setHubPort(hub_port)
     stepper.setDeviceSerialNumber(hub_serial)
-    stepper.openWaitForAttachment(500)
+    stepper.openWaitForAttachment(5000)
     stepper.setControlMode(StepperControlMode.CONTROL_MODE_RUN)
     stepper.setRescaleFactor(rescale_factor)
     stepper.setEngaged(True)
 
     return stepper
 
-class SpeedControllerServer:
+class SpeedControllerServer():
 
     def __init__(self, node, hub_serial, hub_port, action_server_name, rescale_factor=1/32, stop_topic=None, speed_factor_topic=None):
         """
@@ -43,6 +52,7 @@ class SpeedControllerServer:
         @param stop_topic: (optional) the name of the stop topic
         @param speed_factor_topic: (optional) the name of the speed factor topic
         """
+
         # default values
         self.speed_factor = 1
         self.speed = 0
@@ -52,11 +62,12 @@ class SpeedControllerServer:
 
         # listen to topics
         if stop_topic is not None:
-            self.stop_topic  = node.create_subscription(Bool, 'stop_topic', self.stop_callback, 1)
+            self.stop_topic  = node.create_subscription(Bool, 'stop', self.stop_callback, 1)
         if speed_factor_topic is not None:
-            self.speed_factor_topic  = node.create_subscription(Float64, 'speed_factor_topic', self.speed_callback, 1)
+            self.speed_factor_topic  = node.create_subscription(Float64, 'speed_factor', self.speed_callback, 1)
 
         # init stepper
+
         self.stepper = init_stepper(hub_serial, hub_port, rescale_factor)
 
         # make sure the stepper is stopped
@@ -73,20 +84,26 @@ class SpeedControllerServer:
         node.get_logger().info(f"[Stepper Lib][{action_server_name}] Initialization complete")
 		
     def goal_callback(self, goal_request):
+        self.node.get_logger().info(f"{goal_request}")
         return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT
 
     def execute_callback(self, goal_handle):
-        self.speed = goal_handle.velocity_limit
+        self.speed = goal_handle.request.velocity_limit
         self.stepper.setVelocityLimit(self.speed * self.speed_factor)
+
+        self.node.get_logger().info(f"{goal_handle}")
+
 
         while abs(self.speed * self.speed_factor - self.stepper.getVelocity()) > 0.5:
             feedback = SpeedController.Feedback()
 
+            maVar = self.speed * self.speed_factor - self.stepper.getVelocity()
+
             # check that preempt has not been requested by the client
-            if goal_handle.is_cancel_requested() or self.stopped:
+            if goal_handle.is_cancel_requested or self.stopped:
                 break
 
             # publish the feedback
@@ -94,7 +111,8 @@ class SpeedControllerServer:
             feedback.theoretical_velocity = self.stepper.getVelocity() / self.speed_factor
             goal_handle.publish_feedback(feedback)
 
-            self.node.create_rate(0.1).sleep()
+
+            time.sleep(0.1)
 
         # publish result
         result = SpeedController.Result()
@@ -102,7 +120,7 @@ class SpeedControllerServer:
         if abs(self.speed * self.speed_factor - self.stepper.getVelocity()) <= 0.5:
             result.done = True
 				
-        if goal_handle.is_cancel_requested() or self.stopped:
+        if goal_handle.is_cancel_requested or self.stopped:
             goal_handle.canceled()
         else:
             goal_handle.succeed()
@@ -116,8 +134,20 @@ class SpeedControllerServer:
             self.stepper.setVelocityLimit(int(self.speed * self.speed_factor))
 
     def stop_callback(self, msg):
+        
         self.stopped = msg.data
 
         if self.stopped:
             self.stepper.setVelocityLimit(0)
 
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    speed_control_server = SpeedControllerServer()
+
+    rclpy.spin(speed_control_server)
+
+
+if __name__ == '__main__':
+    main()

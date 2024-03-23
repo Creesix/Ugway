@@ -3,6 +3,7 @@
 build/
 install/
 log/
+venv/
 .vscode
 
 **/__pycache__/

@@ -1,0 +1,10 @@
+#goal
+float64[] traj_dir
+float64[] traj_x
+float64[] traj_y
+---
+#result
+bool done
+---
+#feedback
+float64 percentage

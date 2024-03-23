@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'tof_vl53l1x'
+package_name = 'gpio_utils'
 
 setup(
     name=package_name,
@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='mowibox',
-    maintainer_email='ousmanethiongane17@gmail.com',
-    description='Distance detection with TOF VL53L1X sensor',
-    license='Apache License 2.0',
+    maintainer='remi',
+    maintainer_email='remipbw@gmail.com',
+    description='TODO: Package description',
+    license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
