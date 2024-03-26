@@ -21,7 +21,7 @@ def generate_launch_description():
         ),
         Node(
             package='main_ugway',
-            executable='simple_vel',
+            executable='cmd_vel_cdrf',
             name='super_test'
         )
     ])
