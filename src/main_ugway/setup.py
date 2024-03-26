@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'cmd_vel_cdrf = main_ugway.speed_demo:main'
+            'cmd_vel_cdrf = main_ugway.speed_demo:main',
+            'traj_dir_cdrf = main_ugway.trajectory_demo:main'
         ],
     },
 )
