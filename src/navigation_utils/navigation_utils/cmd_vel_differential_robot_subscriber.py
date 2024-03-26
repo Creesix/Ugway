@@ -5,7 +5,6 @@ from rclpy.action import ActionClient
 from rclpy.node import Node
 
 import math
-import time
 
 from phidget_stepper_controllers_msgs.action import SpeedController
 from phidget_stepper_controllers.speed_controller_server import SpeedControllerServer
@@ -102,7 +101,7 @@ class CmdVelSubscriber(Node):
 
             # the initial position and speed
             self.wheels_pos = (-self.left_encoder.getPosition(), self.right_encoder.getPosition())
-            #self.timer = self.create_timer(odom_period, self.timer_callback)
+            self.timer = self.create_timer(odom_period, self.timer_callback)
 
             # the position (0, 0)
             self.pos = Pose()
@@ -138,6 +137,22 @@ class CmdVelSubscriber(Node):
             self.left_stepper_as.send_goal_async(left_goal)
 
             self.cmd_vel_canceled = False
+
+    def timer_callback(self, _):
+        prev_wheels_pos = self.wheels_pos
+        self.wheels_pos = (-self.left_encoder.getPosition(), self.right_encoder.getPosition())
+
+        dx, dy, dtheta = odom_position_calculation(self.wheels_pos, prev_wheels_pos,
+                                                self.pos.orientation.z,
+                                                self.wheel_radius, self.entraxe,
+                                                self.encoder_tics_count)
+        self.pos.position.x += dx
+        self.pos.position.y += dy
+        self.pos.orientation.z += dtheta
+
+        broadcast_associated_tf(self.pos)
+
+        self.odom_pub.publish(get_odom_msg(self.pos))
 
 def main(args=None):
     rclpy.init(args=args)  # Initialize the ROS 2 Python client library
