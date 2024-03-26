@@ -14,6 +14,8 @@ class MinimalPublisher(Node):
         
         self.get_logger().info('Publisher: READY')
 
+        time.sleep(5)
+
         self.publish_callback()
 
     def publish_callback(self):
