@@ -22,7 +22,7 @@ class MinimalPublisher(Node):
         msg = Twist()
 
         # Setting linear and angular velocities
-        msg.linear.x = 0.05
+        msg.linear.x = 1.0
         msg.linear.y = 0.0
         msg.linear.z = 0.0
         msg.angular.x = 0.0
@@ -53,7 +53,7 @@ class MinimalPublisher(Node):
         msg = Twist()
 
         # Setting linear and angular velocities
-        msg.linear.x = -0.05
+        msg.linear.x = -1.0
         msg.linear.y = 0.0
         msg.linear.z = 0.0
         msg.angular.x = 0.0

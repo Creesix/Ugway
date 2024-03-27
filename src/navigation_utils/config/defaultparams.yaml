@@ -1,15 +1,15 @@
 /**:
   ros__parameters:
     navigation_hub: 723793 # serial number du hub
-    left_wheel_stepper: 0   # hub phidget du stepper gauche
+    left_wheel_stepper: 5   # hub phidget du stepper gauche
     right_wheel_stepper: 1   # hub phidget du stepper droit
     entraxe: 24.0  # en cm
-    wheel_radius: 41.436 # en cm
+    wheel_radius: 4.1436 # en cm
     step_count: 200 # steps
     stop_topic: "stop_all"
     speed_factor: "speed_factor"
     tics_per_step: 32 # de combien augmente le compteur (du moteur) de position phidget par steps
     encoder_tics_count: 2048 # nombre de tics sur l'encodeur
-    left_wheel_encoder: 2   # hub phidget de l'encodeur gauche
-    right_wheel_encoder: 3   # hub phidget de l'encodeur droit
+    left_wheel_encoder: 4   # hub phidget de l'encodeur gauche
+    right_wheel_encoder: 0   # hub phidget de l'encodeur droit
     odom_period : 0.25  # (en s) période de rafraichissement de l'odométrie

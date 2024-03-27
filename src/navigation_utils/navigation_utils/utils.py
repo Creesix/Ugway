@@ -7,7 +7,6 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
 
 import tf_transformations
-import tf2_ros
 
 def init_encoder(hub_serial, hub_port, data_interval):
     """
@@ -55,7 +54,7 @@ def odom_position_calculation(wheels_pos, prev_wheels_pos, theta, wheel_radius, 
 
     return dx, dy, dtheta
 
-def broadcast_associated_tf(node, pos):
+def broadcast_associated_tf(node, br, pos):
     """
     Broadcast the tf from odom to base_footprint associated with pos.
 
@@ -63,17 +62,15 @@ def broadcast_associated_tf(node, pos):
     @return:
     """
 
-    br = tf2_ros.TransformBroadcaster()
     t = TransformStamped()
-
-    t.header.stamp = node.get_clock().now()
+    t.header.stamp = node.get_clock().now().to_msg()
     t.header.frame_id = "odom"
     t.child_frame_id = "base_footprint"
     t.transform.translation.x = pos.position.x
     t.transform.translation.y = pos.position.y
     t.transform.translation.z = 0.0
 
-    q = tf_transformations.transformations.quaternion_from_euler(0, 0, pos.orientation.z)
+    q = tf_transformations.quaternion_from_euler(0, 0, pos.orientation.z)
     t.transform.rotation.x = q[0]
     t.transform.rotation.y = q[1]
     t.transform.rotation.z = q[2]
