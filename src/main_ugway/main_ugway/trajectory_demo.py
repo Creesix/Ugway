@@ -52,8 +52,6 @@ def main(args=None):
     traj_x = [0.5, 0.5, 1.0, 1.0]
     traj_y = [0.2, 0.7, 0.7, 0.2]
 
-    minimal_Trajectory.get_logger().info(f"Order de fou")
-
     future = minimal_Trajectory.send_goal_async(traj_dir, traj_x, traj_y)
     minimal_Trajectory.get_logger().info(f"order given actually working on it")
     rclpy.spin_until_future_complete(minimal_Trajectory, future)

@@ -3,6 +3,8 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionServer, ActionClient
+from rclpy.action import CancelResponse
+from rclpy.action import GoalResponse
 
 import tf2_ros
 from tf2_ros import LookupException, ConnectivityException, ExtrapolationException
@@ -21,7 +23,9 @@ class TrajectoryActionServer(Node):
             self,
             Trajectoire, 
             'trajectory_action',
-            self.execute_cb
+            execute_callback=self.execute_callback,
+            goal_callback=self.goal_callback,
+            cancel_callback=self.cancel_callback
         )
 
         # ROS 2 action client
@@ -54,6 +58,11 @@ class TrajectoryActionServer(Node):
 
         self.get_logger().info('[Trajectory Server] Ready')
 
+    def goal_callback(self, goal_request):
+        return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
+
+    def cancel_callback(self, goal_handle):
+        return CancelResponse.ACCEPT
 
     def __set_starting_pos__(self, with_odom=False):
         """
