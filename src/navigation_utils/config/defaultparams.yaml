@@ -8,7 +8,7 @@
     step_count: 200 # steps
     stop_topic: "stop_all"
     speed_factor: "speed_factor"
-    tics_per_step: 32 # de combien augmente le compteur (du moteur) de position phidget par steps
+    tics_per_step: 16 # de combien augmente le compteur (du moteur) de position phidget par steps
     encoder_tics_count: 2048 # nombre de tics sur l'encodeur
     left_wheel_encoder: 4   # hub phidget de l'encodeur gauche
     right_wheel_encoder: 0   # hub phidget de l'encodeur droit
