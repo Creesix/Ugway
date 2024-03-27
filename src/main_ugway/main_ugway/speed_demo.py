@@ -33,7 +33,7 @@ class MinimalPublisher(Node):
 
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
 
-        time.sleep(3)
+        time.sleep(5)
 
         msg = Twist()
 
@@ -64,7 +64,7 @@ class MinimalPublisher(Node):
 
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
 
-        time.sleep(3)
+        time.sleep(5)
 
         msg = Twist()
 
