@@ -59,7 +59,7 @@ class TrajectoryActionServer(Node):
         self.get_logger().info('[Trajectory Server] Ready')
 
     def goal_callback(self, goal_request):
-        return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
+        return GoalResponse.ACCEPT #if not self.stopped else GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT
