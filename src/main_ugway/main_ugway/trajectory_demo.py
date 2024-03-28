@@ -9,7 +9,7 @@ from phidget_stepper_controllers_msgs.action import Trajectoire
 from std_msgs.msg import Float64, Bool
 
 
-class TrajectoryActionServer(Node):
+class TrajectoryActionClient(Node):
     def __init__(self):
         super().__init__('trajectory_server')
 
@@ -20,7 +20,7 @@ class TrajectoryActionServer(Node):
             'TrajectoireController'
         )
 
-        self.get_logger().info('trajectory ocntroller Init')
+        self.get_logger().info('Trajectory controller Init')
 
 
     def send_goal(self, dir, x, y):
@@ -43,7 +43,7 @@ def main(args=None):
 
     time.sleep(10)
 
-    minimal_Trajectory = TrajectoryActionServer()
+    minimal_Trajectory = TrajectoryActionClient()
 
     time.sleep(3)
     # ==== TEST 1 SQUARE
@@ -52,7 +52,7 @@ def main(args=None):
     traj_x = [0.5, 0.5, 1.0, 1.0]
     traj_y = [0.2, 0.7, 0.7, 0.2]
 
-    future = minimal_Trajectory.send_goal_async(traj_dir, traj_x, traj_y)
+    future = minimal_Trajectory.send_goal(traj_dir, traj_x, traj_y)
     minimal_Trajectory.get_logger().info(f"order given actually working on it")
     rclpy.spin_until_future_complete(minimal_Trajectory, future)
 
