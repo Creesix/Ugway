@@ -54,6 +54,8 @@ class DistanceWheelsController(Node):
         self.odom_activate = self.get_parameter('encoder_tics_count').get_parameter_value().integer_value\
                         or self.get_parameter('left_wheel_encoder').get_parameter_value().integer_value\
                         or self.get_parameter('right_wheel_encoder').get_parameter_value().integer_value
+        
+        self.odom_activate = False
 
         if self.odom_activate:
             assert self.get_parameter('encoder_tics_count').get_parameter_value().integer_value
