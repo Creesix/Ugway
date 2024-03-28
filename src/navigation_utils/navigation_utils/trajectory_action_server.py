@@ -160,10 +160,10 @@ class TrajectoryActionServer(Node):
 
     def execute_cb(self, trajectory):
         success = True
-        n = len(trajectory.trajX)
+        n = len(trajectory.traj_x)
 
         # take symmetrical traj if necessary
-        trajectory.trajX = [trajX if self.is_left_side else - trajX for trajX in trajectory.trajX]
+        trajectory.traj_x = [traj_x if self.is_left_side else - traj_x for traj_x in trajectory.traj_x]
 
         self.get_logger().info(f"[Trajectory Server] New trajectory received ({n} points)")
         for i in range(n):
@@ -172,9 +172,9 @@ class TrajectoryActionServer(Node):
             self.__set_starting_pos__(self.use_odom)
 
             # the next pos to go
-            self.x2 = trajectory.trajX[i]
-            self.y2 = trajectory.trajY[i]
-            traj_dir = trajectory.trajDir[i] # forward/backward
+            self.x2 = trajectory.traj_x[i]
+            self.y2 = trajectory.traj_y[i]
+            traj_dir = trajectory.traj_dir[i] # forward/backward
 
             # calculate dist and angle to (x2, y2)
             dist, angle = self.__calculate_dist_and_angle__(traj_dir)
