@@ -17,7 +17,7 @@ class TrajectoryActionClient(Node):
         self._action_client = ActionClient(
             self,
             Trajectoire, 
-            'TrajectoireController'
+            'trajectory_action'
         )
 
         self.get_logger().info('Trajectory controller Init')
