@@ -63,10 +63,10 @@ def main(args=None):
 
     step_per_rotation = 360/action_client.get_parameter('pasStepper').get_parameter_value().double_value
     
-    speed = 600
+    speed = 200
 
     # ==== TEST 1
-    future = action_client.send_goal(speed, 1000)
+    future = action_client.send_goal(speed, -10000)
     action_client.get_logger().info(f"stepper should turn at {step_per_rotation / speed} sec / revolution and do a complete rotation")
     rclpy.spin_until_future_complete(action_client, future)
 
@@ -75,14 +75,14 @@ def main(args=None):
     # ==== TEST 2
     action_client.get_logger().info(
         f"stepper should turn at {step_per_rotation / speed} sec / revolution and stop because of the stop_topic in 0,5s.")
-    future = action_client.send_goal(speed, 1000)
+    future = action_client.send_goal(speed, 10000)
     rclpy.spin_until_future_complete(action_client, future)
 
 
     
     time.sleep(1)
     speed_factor_msg = Float64()
-    speed_factor_msg.data = 1.5
+    speed_factor_msg.data = 1.0
     speed_factor_topic.publish(speed_factor_msg)
 
     action_client.get_logger().info(f"Stepper here")

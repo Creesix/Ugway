@@ -59,7 +59,7 @@ class TrajectoryActionServer(Node):
         self.get_logger().info('[Trajectory Server] Ready')
 
     def goal_callback(self, goal_request):
-        return GoalResponse.ACCEPT #if not self.stopped else GoalResponse.REJECT
+        return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT
@@ -160,10 +160,11 @@ class TrajectoryActionServer(Node):
 
     def execute_cb(self, trajectory):
         success = True
+        
         n = len(trajectory.traj_x)
 
         # take symmetrical traj if necessary
-        trajectory.traj_x = [traj_x if self.is_left_side else - traj_x for traj_x in trajectory.traj_x]
+        trajectory.traj_x = [trajX if self.is_left_side else - trajX for trajX in trajectory.traj_x]
 
         self.get_logger().info(f"[Trajectory Server] New trajectory received ({n} points)")
         for i in range(n):
