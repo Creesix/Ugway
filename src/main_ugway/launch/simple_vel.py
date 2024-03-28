@@ -24,4 +24,9 @@ def generate_launch_description():
             executable='cmd_vel_cdrf',
             name='super_test'
         )
+        Node(
+            package='lidar_vl53l1x_processing',
+            executable='lidar_ensea',
+            name='super_lidar'
+        )
     ])
