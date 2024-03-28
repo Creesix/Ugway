@@ -23,7 +23,7 @@ class TrajectoryActionServer(Node):
             self,
             Trajectoire, 
             'trajectory_action',
-            execute_callback=self.execute_callback,
+            execute_callback=self.execute_cb,
             goal_callback=self.goal_callback,
             cancel_callback=self.cancel_callback
         )
