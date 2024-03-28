@@ -86,7 +86,7 @@ class SpeedControllerServer():
 		
     def goal_callback(self, goal_request):
         self.node.get_logger().info(f"{goal_request}")
-        return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
+        return GoalResponse.ACCEPT #if not self.stopped else GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT

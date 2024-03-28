@@ -1,7 +1,0 @@
-pin_list:
-  - pin: 23
-    is_pull_up: true
-  - pin: 24
-    is_pull_up: false
-  - pin: 25
-    is_pull_up: true
