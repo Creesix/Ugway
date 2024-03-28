@@ -22,7 +22,7 @@ class MinimalPublisher(Node):
         msg = Twist()
 
         # Setting linear and angular velocities
-        msg.linear.x = 1.2
+        msg.linear.x = 2.0
         msg.linear.y = 0.0
         msg.linear.z = 0.0
         msg.angular.x = 0.0
@@ -41,7 +41,7 @@ class MinimalPublisher(Node):
         msg.linear.z = 0.0
         msg.angular.x = 0.0
         msg.angular.y = 0.0
-        msg.angular.z = 0.0
+        msg.angular.z = 0.02
 
         self.publisher_.publish(msg)
 
@@ -80,7 +80,7 @@ class MinimalPublisher(Node):
         time.sleep(5)
 
         # Setting linear and angular velocities
-        msg.linear.x = 4.0
+        msg.linear.x = 1.0
         msg.linear.y = 0.0
         msg.linear.z = 0.0
         msg.angular.x = 0.0
@@ -91,6 +91,8 @@ class MinimalPublisher(Node):
 
         # Logging the published message's details
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
+        
+        time.sleep(5)
         
         # Setting linear and angular velocities
         msg.linear.x = 0.0

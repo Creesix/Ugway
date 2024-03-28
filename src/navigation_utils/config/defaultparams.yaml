@@ -4,7 +4,7 @@
     left_wheel_stepper: 5   # hub phidget du stepper gauche
     right_wheel_stepper: 1   # hub phidget du stepper droit
     entraxe: 24.0  # en cm
-    wheel_radius: 20.436 # en cm
+    wheel_radius: 41.436 # en cm
     step_count: 200 # steps
     stop_topic: "stop_all"
     speed_factor: "speed_factor"

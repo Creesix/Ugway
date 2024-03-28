@@ -139,7 +139,9 @@ class CmdVelSubscriber(Node):
             self.right_stepper_as.wait_for_server()
             self.left_stepper_as.wait_for_server()
 
-            self.right_stepper_as.send_goal_async(right_goal)
+            self.timerGoal = self.create_timer(0.5, lambda: self.para_callback(right_goal))
+
+            #self.right_stepper_as.send_goal_async(right_goal)
             self.left_stepper_as.send_goal_async(left_goal)
 
             self.cmd_vel_canceled = False
@@ -159,6 +161,12 @@ class CmdVelSubscriber(Node):
         broadcast_associated_tf(self, self.br, self.pos)
 
         self.odom_pub.publish(get_odom_msg(self, self.pos))
+
+    def para_callback(self, goal):
+
+        self.timerGoal.cancel()
+
+        self.right_stepper_as.send_goal_async(goal)
 
 def main(args=None):
     rclpy.init(args=args)  # Initialize the ROS 2 Python client library
