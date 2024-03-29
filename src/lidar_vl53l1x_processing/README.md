@@ -21,7 +21,7 @@ source install/setup.bash
 ```
 Cette commande affichera la distance minimale ainsi que l'information publiée par la node :
 ```
-ros2 run lidar_vl53l1x_processing data_send
+ros2 run lidar_vl53l1x_processing lidar_ensea
 ```
 
 ### Troubleshooting
