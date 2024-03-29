@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Int32, String, Bool
+from std_msgs.msg import Int32, String, Bool, Float64
 
 import serial
 
@@ -86,10 +86,11 @@ class LidarNode(Node):
     def __init__(self):
         super().__init__('lidar_node')
         self.publisher_ = self.create_publisher(Bool, 'stop', 10)
+        self.speed_factor_topic = self.create_publisher(Float64, 'speed_factor', 10)
         timer_period = 0.05  # seconds
         self.timer = self.create_timer(timer_period, self.publish_lidar_data)
 
-        #Opening serial communication
+        # Opening serial communication
         self.ser = serial.Serial("/dev/ttyAMA1", baudrate=115200, timeout=5.0)
         self.get_logger().info("Serial port : "+ self.ser.name)
         self.ser.flush()
@@ -101,9 +102,18 @@ class LidarNode(Node):
         distances = [distance[1] for distance in processed_data.measure]
         min_distance = min(distances)
 
-        threshold = 350
+        # Distances thresholds
+        slow_threshold = 600
+        stop_threshold = 300
+
+        slowingSpeed = Float64()
+        slowingSpeed.data = 0.4
+
+        if stop_threshold <= min_distance <= slow_threshold:
+            self.speed_factor_topic.publish(slowingSpeed)
+
         # The '20' condition is to prevent data jumps
-        if 20 <= min_distance <= threshold:
+        elif 20 <= min_distance <= stop_threshold:
                 information = True
         else:
                 information = False
@@ -120,7 +130,7 @@ class LidarNode(Node):
         # Display the distance table if uncommented
         # self.get_logger().info("%s" % str(distances))
 
-        self.get_logger().info("Minimal distance: %d, Information : %b" % (min_distance, msg.data))
+        self.get_logger().info("Minimal distance: %d, Information : %s" % (min_distance, msg.data))
 
 def main(args=None):
     rclpy.init(args=args)

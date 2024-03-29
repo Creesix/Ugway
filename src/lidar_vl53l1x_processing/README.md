@@ -1,6 +1,6 @@
 # lidar_vl53l1x_processing pkg
 
-Ce package ROS2 humble permet de récupérer les informations fournies par le système de détection du robot (16 capteurs TOF, STM32 VL53L1X). Il s'agit d'un publisher qui envoie une information en fonction de la ditance minimale récupérée. 
+Ce package ROS2 humble permet de récupérer les informations fournies par le système de détection du robot (16 capteurs TOF, STM32 VL53L1X). Il s'agit d'un publisher qui envoie une information en fonction de la distance minimale récupérée. 
 
 ### Pour l'utiliser : 
 
@@ -21,7 +21,7 @@ source install/setup.bash
 ```
 Cette commande affichera la distance minimale ainsi que l'information publiée par la node :
 ```
-ros2 run lidar_vl53l1x_processing data_send
+ros2 run lidar_vl53l1x_processing lidar_ensea
 ```
 
 ### Troubleshooting
