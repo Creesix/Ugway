@@ -5,12 +5,12 @@ from rclpy.action import ActionClient
 from rclpy.node import Node
 
 import math
-import time
 
 from phidget_stepper_controllers_msgs.action import SpeedController
 from phidget_stepper_controllers.speed_controller_server import SpeedControllerServer
 
 from geometry_msgs.msg import Twist, Pose
+from tf2_ros import TransformBroadcaster
 
 from navigation_utils.utils import *
 
@@ -54,6 +54,8 @@ class CmdVelSubscriber(Node):
         self.odom_activate = self.get_parameter('encoder_tics_count').get_parameter_value().integer_value\
                         or self.get_parameter('left_wheel_encoder').get_parameter_value().integer_value\
                         or self.get_parameter('right_wheel_encoder').get_parameter_value().integer_value
+
+        self.odom_activate = False
 
         if self.odom_activate:
             assert self.get_parameter('encoder_tics_count').get_parameter_value().integer_value
@@ -102,16 +104,19 @@ class CmdVelSubscriber(Node):
 
             # the initial position and speed
             self.wheels_pos = (-self.left_encoder.getPosition(), self.right_encoder.getPosition())
-            #self.timer = self.create_timer(odom_period, self.timer_callback)
-
+            
             # the position (0, 0)
             self.pos = Pose()
+
+            #self.timer = self.create_timer(odom_period, self.timer_callback)
 
             self.get_logger().info('[cmd_vel] All encoders started')
 
         self.last_cmd_vel = None
         self.cmd_vel_canceled = False
         self._cmd_vel = self.create_subscription(Twist, "cmd_vel", self.cmd_callback, 1)
+
+        self.br = TransformBroadcaster(self)
 
         self.get_logger().info('[cmd_vel] Ready')
 
@@ -138,6 +143,22 @@ class CmdVelSubscriber(Node):
             self.left_stepper_as.send_goal_async(left_goal)
 
             self.cmd_vel_canceled = False
+
+    def timer_callback(self):
+        prev_wheels_pos = self.wheels_pos
+        self.wheels_pos = (-self.left_encoder.getPosition(), self.right_encoder.getPosition())
+
+        dx, dy, dtheta = odom_position_calculation(self.wheels_pos, prev_wheels_pos,
+                                                self.pos.orientation.z,
+                                                self.wheel_radius, self.entraxe,
+                                                self.encoder_tics_count)
+        self.pos.position.x += dx
+        self.pos.position.y += dy
+        self.pos.orientation.z += dtheta
+
+        broadcast_associated_tf(self, self.br, self.pos)
+
+        self.odom_pub.publish(get_odom_msg(self, self.pos))
 
 def main(args=None):
     rclpy.init(args=args)  # Initialize the ROS 2 Python client library

@@ -37,6 +37,7 @@ def init_stepper(hub_serial, hub_port, rescale_factor):
     stepper.openWaitForAttachment(500)
     stepper.setControlMode(StepperControlMode.CONTROL_MODE_STEP)
     stepper.setRescaleFactor(rescale_factor)
+    stepper.setCurrentLimit(4)
     stepper.setEngaged(True)
 
     return stepper

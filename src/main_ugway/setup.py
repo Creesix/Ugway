@@ -1,7 +1,6 @@
 from setuptools import find_packages, setup
-import os
 
-package_name = 'gpio_utils'
+package_name = 'main_ugway'
 
 setup(
     name=package_name,
@@ -11,18 +10,18 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'config'), ['config/configreader.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='remi',
     maintainer_email='remipbw@gmail.com',
     description='TODO: Package description',
-    license='Apache-2.0',
+    license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'gpio_reader_test = gpio_utils.gpio_reader:main'
+            'cmd_vel_cdrf = main_ugway.speed_demo:main',
+            'traj_dir_cdrf = main_ugway.trajectory_demo:main'
         ],
     },
 )

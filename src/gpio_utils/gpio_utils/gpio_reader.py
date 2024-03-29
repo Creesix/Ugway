@@ -9,6 +9,7 @@ class DigitalReader(Node):
 
     def __init__(self, pin, is_pull_up):
         super().__init__('gpio_publisher_' + str(pin))
+
         self.pin = pin
         self.is_pull_up = is_pull_up
 
@@ -47,25 +48,29 @@ class DigitalReader(Node):
     def __del__(self):
         self.pi.stop()
 
+class DigitalPinManager(Node):
+    def __init__(self):
+        super().__init__('my_pin_manager_node')
 
-def load_config_from_yaml():
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    yaml_file_path = os.path.join(script_dir, '..', 'config', 'config_reader.yaml')
+        self.declare_parameter('pin_list', [])
+        pin_configs = self.get_parameter('pin_list').get_parameter_value().string_array_value
 
-    with open(yaml_file_path, 'r') as yaml_file:
-        config = yaml.safe_load(yaml_file)
-
-    return config.get('pin_list', [])
+        self.digital_pin_managers = [
+            DigitalReader(pin['pin'], pin['is_pull_up']) for pin in pin_configs
+        ]
 
 
 def main(args=None):
     rclpy.init(args=args)
 
-    pin_configs = load_config_from_yaml()
+    gpio_reader = DigitalPinManager()
 
-    digital_readers = [DigitalReader(pin['pin'], pin['is_pull_up']) for pin in pin_configs]
+    rclpy.spin(gpio_reader)
 
-    rclpy.spin(digital_readers)
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    gpio_reader.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

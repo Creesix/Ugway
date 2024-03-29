@@ -1,7 +1,7 @@
 /test_speed:
   ros__parameters:
-    wheelRadius: 4.06 # en cm
+    wheelRadius: 41.436 # en cm
     pasStepper: 1.8 # degrés par step
-    ticsPerStep: 32 # de combien augmente le compteur (du moteur) de position phidget par steps
-    stepper: 1   # port du stepper on the phidget hub
+    ticsPerStep: 16 # de combien augmente le compteur (du moteur) de position phidget par steps
+    stepper: 5   # port du stepper on the phidget hub
     hub : 723793  # serial number du hub

@@ -54,6 +54,8 @@ class DistanceWheelsController(Node):
         self.odom_activate = self.get_parameter('encoder_tics_count').get_parameter_value().integer_value\
                         or self.get_parameter('left_wheel_encoder').get_parameter_value().integer_value\
                         or self.get_parameter('right_wheel_encoder').get_parameter_value().integer_value
+        
+        self.odom_activate = False
 
         if self.odom_activate:
             assert self.get_parameter('encoder_tics_count').get_parameter_value().integer_value
@@ -119,7 +121,7 @@ class DistanceWheelsController(Node):
         self.get_logger().info("[main wheels] Ready")
 
     def goal_callback(self, goal_request):
-        return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
+        return GoalResponse.ACCEPT
 
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT

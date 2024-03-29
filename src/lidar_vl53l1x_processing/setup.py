@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-                'send_data = lidar_vl53l1x_processing.data_processing:main',
+                'lidar_ensea = lidar_vl53l1x_processing.data_processing:main',
         ],
     },
 )

@@ -3,6 +3,8 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionServer, ActionClient
+from rclpy.action import CancelResponse
+from rclpy.action import GoalResponse
 
 import tf2_ros
 from tf2_ros import LookupException, ConnectivityException, ExtrapolationException
@@ -21,7 +23,9 @@ class TrajectoryActionServer(Node):
             self,
             Trajectoire, 
             'trajectory_action',
-            self.execute_cb
+            execute_callback=self.execute_cb,
+            goal_callback=self.goal_callback,
+            cancel_callback=self.cancel_callback
         )
 
         # ROS 2 action client
@@ -54,6 +58,11 @@ class TrajectoryActionServer(Node):
 
         self.get_logger().info('[Trajectory Server] Ready')
 
+    def goal_callback(self, goal_request):
+        return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
+
+    def cancel_callback(self, goal_handle):
+        return CancelResponse.ACCEPT
 
     def __set_starting_pos__(self, with_odom=False):
         """
@@ -151,10 +160,15 @@ class TrajectoryActionServer(Node):
 
     def execute_cb(self, trajectory):
         success = True
-        n = len(trajectory.trajX)
+
+        goal_trajX = trajectory.request.traj_x
+        goal_trajY = trajectory.request.traj_y
+        goal_trajDir = trajectory.request.traj_dir
+        
+        n = len(goal_trajX)
 
         # take symmetrical traj if necessary
-        trajectory.trajX = [trajX if self.is_left_side else - trajX for trajX in trajectory.trajX]
+        goal_trajX = [trajX if self.is_left_side else - trajX for trajX in goal_trajX]
 
         self.get_logger().info(f"[Trajectory Server] New trajectory received ({n} points)")
         for i in range(n):
@@ -163,9 +177,9 @@ class TrajectoryActionServer(Node):
             self.__set_starting_pos__(self.use_odom)
 
             # the next pos to go
-            self.x2 = trajectory.trajX[i]
-            self.y2 = trajectory.trajY[i]
-            traj_dir = trajectory.trajDir[i] # forward/backward
+            self.x2 = goal_trajX[i]
+            self.y2 = goal_trajY[i]
+            traj_dir = goal_trajDir[i] # forward/backward
 
             # calculate dist and angle to (x2, y2)
             dist, angle = self.__calculate_dist_and_angle__(traj_dir)
