@@ -1,0 +1,64 @@
+diff --git a/src/main_ugway/setup.py b/src/main_ugway/setup.py
+index f6d3af3..5d0b53b 100644
+--- a/src/main_ugway/setup.py
++++ b/src/main_ugway/setup.py
+@@ -1,4 +1,6 @@
+ from setuptools import find_packages, setup
++from glob import glob
++import os
+ 
+ package_name = 'main_ugway'
+ 
+@@ -10,6 +12,7 @@ setup(
+         ('share/ament_index/resource_index/packages',
+             ['resource/' + package_name]),
+         ('share/' + package_name, ['package.xml']),
++        (os.path.join('share', package_name, 'launch'), glob('launch/*.py'))
+     ],
+     install_requires=['setuptools'],
+     zip_safe=True,
+diff --git a/src/navigation_utils/navigation_utils/cmd_vel_differential_robot_subscriber.py b/src/navigation_utils/navigation_utils/cmd_vel_differential_robot_subscriber.py
+index b6bac03..a93f870 100755
+--- a/src/navigation_utils/navigation_utils/cmd_vel_differential_robot_subscriber.py
++++ b/src/navigation_utils/navigation_utils/cmd_vel_differential_robot_subscriber.py
+@@ -5,6 +5,7 @@ from rclpy.action import ActionClient
+ from rclpy.node import Node
+ 
+ import math
++from rclpy.executors import MultiThreadedExecutor
+ 
+ from phidget_stepper_controllers_msgs.action import SpeedController
+ from phidget_stepper_controllers.speed_controller_server import SpeedControllerServer
+@@ -167,7 +168,9 @@ def main(args=None):
+     cmd_vel_subscriber = CmdVelSubscriber()
+ 
+     # Spin the node so its callbacks can be called
+-    rclpy.spin(cmd_vel_subscriber)
++    executor = MultiThreadedExecutor()
++    executor.add_node(cmd_vel_subscriber)
++    executor.spin()
+ 
+     # Shutdown the ROS 2 Python client library
+     cmd_vel_subscriber.destroy_node()
+diff --git a/src/phidget_stepper_controllers/phidget_stepper_controllers/speed_controller_server.py b/src/phidget_stepper_controllers/phidget_stepper_controllers/speed_controller_server.py
+index 203175e..73a3676 100755
+--- a/src/phidget_stepper_controllers/phidget_stepper_controllers/speed_controller_server.py
++++ b/src/phidget_stepper_controllers/phidget_stepper_controllers/speed_controller_server.py
+@@ -85,7 +85,7 @@ class SpeedControllerServer():
+         node.get_logger().info(f"[Stepper Lib][{action_server_name}] Initialization complete")
+ 		
+     def goal_callback(self, goal_request):
+-        self.node.get_logger().info(f"{goal_request}")
++        self.node.get_logger().info(f"request {time.time()}")
+         return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
+ 
+     def cancel_callback(self, goal_handle):
+@@ -95,7 +95,7 @@ class SpeedControllerServer():
+         self.speed = goal_handle.request.velocity_limit
+         self.stepper.setVelocityLimit(self.speed * self.speed_factor)
+ 
+-        self.node.get_logger().info(f"{goal_handle}")
++        self.node.get_logger().info(f"handle {time.time()}")
+ 
+ 
+         while abs(self.speed * self.speed_factor - self.stepper.getVelocity()) > 0.5:
