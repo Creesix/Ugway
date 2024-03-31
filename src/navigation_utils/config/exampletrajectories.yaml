@@ -1,8 +1,8 @@
 /**:
   ros__parameters:
-      x_depart: 1.0
+      x_depart: 0.0
       y_depart: 0.2
-      angle_depart: 1.57
+      angle_depart: 1.0
       is_left_side: True
-      use_odom: False
+      use_odom: True
       trajectory_goal_error: 0.1
