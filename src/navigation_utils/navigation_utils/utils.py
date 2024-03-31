@@ -86,7 +86,7 @@ def get_odom_msg(node, pos):
     @return:
     """
     msg = Odometry()
-    msg.header.stamp = node.get_clock().now()
+    msg.header.stamp = node.get_clock().now().to_msg()
     msg.header.frame_id = "odom"
     msg.child_frame_id = "base_footprint"
     msg.pose.pose.position.x = pos.position.x

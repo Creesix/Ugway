@@ -23,7 +23,7 @@ def generate_launch_description():
             package='main_ugway',
             executable='cmd_vel_cdrf',
             name='super_test'
-        )
+        ),
         Node(
             package='lidar_vl53l1x_processing',
             executable='lidar_ensea',

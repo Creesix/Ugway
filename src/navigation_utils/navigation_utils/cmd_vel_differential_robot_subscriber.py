@@ -5,6 +5,7 @@ from rclpy.action import ActionClient
 from rclpy.node import Node
 
 import math
+from rclpy.executors import MultiThreadedExecutor
 
 from phidget_stepper_controllers_msgs.action import SpeedController
 from phidget_stepper_controllers.speed_controller_server import SpeedControllerServer
@@ -167,7 +168,9 @@ def main(args=None):
     cmd_vel_subscriber = CmdVelSubscriber()
 
     # Spin the node so its callbacks can be called
-    rclpy.spin(cmd_vel_subscriber)
+    executor = MultiThreadedExecutor()
+    executor.add_node(cmd_vel_subscriber)
+    executor.spin()
 
     # Shutdown the ROS 2 Python client library
     cmd_vel_subscriber.destroy_node()

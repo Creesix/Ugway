@@ -85,7 +85,7 @@ class SpeedControllerServer():
         node.get_logger().info(f"[Stepper Lib][{action_server_name}] Initialization complete")
 		
     def goal_callback(self, goal_request):
-        self.node.get_logger().info(f"{goal_request}")
+        self.node.get_logger().info(f"request {time.time()}")
         return GoalResponse.ACCEPT if not self.stopped else GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):
@@ -95,7 +95,7 @@ class SpeedControllerServer():
         self.speed = goal_handle.request.velocity_limit
         self.stepper.setVelocityLimit(self.speed * self.speed_factor)
 
-        self.node.get_logger().info(f"{goal_handle}")
+        self.node.get_logger().info(f"handle {time.time()}")
 
 
         while abs(self.speed * self.speed_factor - self.stepper.getVelocity()) > 0.5:

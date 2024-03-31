@@ -104,7 +104,7 @@ class DistanceWheelsController(Node):
 
             # the initial position and speed
             self.wheels_pos = (-self.left_encoder.getPosition(), self.right_encoder.getPosition())
-            #self.timer = self.create_timer(odom_period, self.timer_callback)
+            self.timer = self.create_timer(odom_period, self.timer_callback)
 
             # the position (0, 0)
             self.pos = Pose()
