@@ -42,7 +42,7 @@ class StartService(Node):
         msg.linear.z = 0.0
         msg.angular.x = 0.0
         msg.angular.y = 0.0
-        msg.angular.z = 0.05
+        msg.angular.z = 0.15
 
         self.publisher_.publish(msg)
 
@@ -86,7 +86,7 @@ class StartService(Node):
         msg.linear.z = 0.0
         msg.angular.x = 0.0
         msg.angular.y = 0.0
-        msg.angular.z = 0.05
+        msg.angular.z = 0.1
 
         self.publisher_.publish(msg)
 
@@ -101,7 +101,7 @@ class StartService(Node):
         msg.linear.z = 0.0
         msg.angular.x = 0.0
         msg.angular.y = 0.0
-        msg.angular.z = -0.5
+        msg.angular.z = -0.09
 
         self.publisher_.publish(msg)
 
@@ -116,14 +116,14 @@ class StartService(Node):
         msg.linear.z = 0.0
         msg.angular.x = 0.0
         msg.angular.y = 0.0
-        msg.angular.z = -0.0
+        msg.angular.z = 0.0
 
         self.publisher_.publish(msg)
 
         # Logging the published message's details
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
         
-        time.sleep(2)
+        time.sleep(15)
 
         # Setting linear and angular velocities
         msg.linear.x = 0.0
