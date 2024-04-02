@@ -20,11 +20,6 @@ def generate_launch_description():
             parameters=[config]
         ),
         Node(
-            package='main_ugway',
-            executable='cmd_vel_cdrf',
-            name='super_test'
-        ),
-        Node(
             package='start_robot',
             executable='service',
             name='start_service'
