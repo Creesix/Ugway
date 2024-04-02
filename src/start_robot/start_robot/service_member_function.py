@@ -13,20 +13,13 @@ class StartService(Node):
 
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 1)
         
-        self.get_logger().info('Publisher: READY')
-
-        time.sleep(3)
-
-        self.publish_callback()   
+        self.get_logger().info('Publisher: READY') 
     
     # Récupération de la stratégie
     def strategy_callback(self, request, response):
         response.strategy = request.strategy                                          
         self.get_logger().info('Incoming strategy: %d' % (request.strategy))  
 
-        return response
-
-    def publish_callback(self):
         msg = Twist()
 
         # Setting linear and angular velocities
