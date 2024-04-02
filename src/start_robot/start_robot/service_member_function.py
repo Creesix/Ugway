@@ -71,7 +71,7 @@ class StartService(Node):
         # Logging the published message's details
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
         
-        time.sleep(5)
+        time.sleep(3)
 
         # Setting linear and angular velocities
         msg.linear.x = 0.0
