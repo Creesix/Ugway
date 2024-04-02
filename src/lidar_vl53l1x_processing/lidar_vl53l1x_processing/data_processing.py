@@ -110,14 +110,14 @@ class LidarNode(Node):
         robotSpeed.data = 0.4
 
         if stop_threshold <= min_distance <= slow_threshold:
-            self.speed_factor_topic.publish(slowingSpeed)
+            self.speed_factor_topic.publish(robotSpeed)
 
         # The '20' condition is to prevent data jumps
         elif 20 <= min_distance <= stop_threshold:
                 information = True
         else:
                 information = False
-                self.speed_factor_topic.publish(1.0)
+                self.speed_factor_topic.publish(Float64(1.0))
 
         # Actually unused but may be useful
         # For knowing if the obstacle is in front of the robot or behind

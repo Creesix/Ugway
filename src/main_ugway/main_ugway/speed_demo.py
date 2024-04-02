@@ -100,7 +100,7 @@ class MinimalPublisher(Node):
         msg.linear.z = 0.0
         msg.angular.x = 0.0
         msg.angular.y = 0.0
-        msg.angular.z = -0.5
+        msg.angular.z = -0.15
 
         self.publisher_.publish(msg)
 
