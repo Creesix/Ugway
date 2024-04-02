@@ -14,26 +14,12 @@ class MinimalPublisher(Node):
         
         self.get_logger().info('Publisher: READY')
 
-        time.sleep(5)
+        time.sleep(3)
 
         self.publish_callback()
 
     def publish_callback(self):
         msg = Twist()
-
-        # Setting linear and angular velocities
-        msg.linear.x = 3.0
-        msg.linear.y = 0.0
-        msg.linear.z = 0.0
-        msg.angular.x = 0.0
-        msg.angular.y = 0.0
-        msg.angular.z = 0.005
-
-        self.publisher_.publish(msg)
-
-        self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
-
-        time.sleep(3)
 
         # Setting linear and angular velocities
         msg.linear.x = 2.0
@@ -45,13 +31,27 @@ class MinimalPublisher(Node):
 
         self.publisher_.publish(msg)
 
+        self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
+
+        time.sleep(3.2)
+
+        # Setting linear and angular velocities
+        msg.linear.x = 1.0
+        msg.linear.y = 0.0
+        msg.linear.z = 0.0
+        msg.angular.x = 0.0
+        msg.angular.y = 0.0
+        msg.angular.z = 0.005
+
+        self.publisher_.publish(msg)
+
         # Logging the published message's details
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
         
-        time.sleep(4)
+        time.sleep(1.5)
 
         # Setting linear and angular velocities
-        msg.linear.x = -1.2
+        msg.linear.x = 3.0
         msg.linear.y = 0.0
         msg.linear.z = 0.0
         msg.angular.x = 0.0
@@ -77,10 +77,10 @@ class MinimalPublisher(Node):
 
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
 
-        time.sleep(5)
+        time.sleep(4)
 
         # Setting linear and angular velocities
-        msg.linear.x = 1.0
+        msg.linear.x = 0.0
         msg.linear.y = 0.0
         msg.linear.z = 0.0
         msg.angular.x = 0.0
@@ -92,8 +92,38 @@ class MinimalPublisher(Node):
         # Logging the published message's details
         self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
         
-        time.sleep(5)
+        time.sleep(1.5)
         
+        # Setting linear and angular velocities
+        msg.linear.x = -2.0
+        msg.linear.y = 0.0
+        msg.linear.z = 0.0
+        msg.angular.x = 0.0
+        msg.angular.y = 0.0
+        msg.angular.z = -0.5
+
+        self.publisher_.publish(msg)
+
+        time.sleep(3.5)
+
+        # Logging the published message's details
+        self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
+        
+        # Setting linear and angular velocities
+        msg.linear.x = -2.0
+        msg.linear.y = 0.0
+        msg.linear.z = 0.0
+        msg.angular.x = 0.0
+        msg.angular.y = 0.0
+        msg.angular.z = -0.0
+
+        self.publisher_.publish(msg)
+
+        # Logging the published message's details
+        self.get_logger().info(f'Publishing linear: {msg.linear.x}, {msg.linear.y}, {msg.linear.z}; angular: {msg.angular.x}, {msg.angular.y}, {msg.angular.z}')
+        
+        time.sleep(2)
+
         # Setting linear and angular velocities
         msg.linear.x = 0.0
         msg.linear.y = 0.0
