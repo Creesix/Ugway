@@ -25,6 +25,16 @@ def generate_launch_description():
             name='super_test'
         ),
         Node(
+            package='start_robot',
+            executable='service',
+            name='start_service'
+        ),
+        Node(
+            package='start_robot',
+            executable='client',
+            name='client_service'
+        ),
+        Node(
             package='lidar_vl53l1x_processing',
             executable='lidar_ensea',
             name='super_lidar'
