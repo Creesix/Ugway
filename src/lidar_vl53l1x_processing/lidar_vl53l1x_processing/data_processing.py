@@ -106,8 +106,8 @@ class LidarNode(Node):
         slow_threshold = 600
         stop_threshold = 300
 
-        slowingSpeed = Float64()
-        slowingSpeed.data = 0.4
+        robotSpeed = Float64()
+        robotSpeed.data = 0.4
 
         if stop_threshold <= min_distance <= slow_threshold:
             self.speed_factor_topic.publish(slowingSpeed)
@@ -117,6 +117,7 @@ class LidarNode(Node):
                 information = True
         else:
                 information = False
+                self.speed_factor_topic.publish(1.0)
 
         # Actually unused but may be useful
         # For knowing if the obstacle is in front of the robot or behind
@@ -130,7 +131,7 @@ class LidarNode(Node):
         # Display the distance table if uncommented
         # self.get_logger().info("%s" % str(distances))
 
-        self.get_logger().info("Minimal distance: %d, Information : %s" % (min_distance, msg.data))
+        #self.get_logger().info("Minimal distance: %d, Information : %s" % (min_distance, msg.data))
 
 def main(args=None):
     rclpy.init(args=args)

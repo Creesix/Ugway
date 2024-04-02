@@ -4,7 +4,7 @@ Ce package ROS2 humble permet de récupérer les informations fournies par le sy
 
 ### Pour l'utiliser : 
 
-Ajouter le dossier 'lidar_vl53l1x_processing' à votre dans le dossier /src de votre workspace ROS2.
+Ajouter le dossier 'lidar_vl53l1x_processing' dans le dossier /src de votre workspace ROS2.
 
 Il ne faut pas oublier de source votre environnement ROS2 :
 ```
