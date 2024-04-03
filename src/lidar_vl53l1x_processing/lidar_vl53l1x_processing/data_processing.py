@@ -102,31 +102,28 @@ class LidarNode(Node):
         distances = [distance[1] for distance in processed_data.measure]
         min_distance = min(distances)
 
-        # Distances thresholds
-        slow_threshold = 600
-        stop_threshold = 300
+        # Distance threshold
+        stop_threshold = 450
 
         robotSpeed = Float64()
-        robotSpeed.data = 0.4
-
-        if stop_threshold <= min_distance <= slow_threshold:
-            self.speed_factor_topic.publish(slowingSpeed)
-
+        
         # The '20' condition is to prevent data jumps
-        elif 20 <= min_distance <= stop_threshold:
-                information = True
-        else:
-                information = False
-                self.speed_factor_topic.publish(1.0)
+        if 20 <= min_distance <= stop_threshold:
+            robotSpeed.data = 0.0
 
+        else:
+            robotSpeed.data = 1.0
+                
         # Actually unused but may be useful
         # For knowing if the obstacle is in front of the robot or behind
         min_distance_index = distances.index(min_distance)
 
         # Displaying data
-        msg = Bool()
-        msg.data = information
-        self.publisher_.publish(msg)
+        self.speed_factor_topic.publish(robotSpeed)
+
+        # msg = Bool()
+        # msg.data = information
+        # self.publisher_.publish(msg)
 
         # Display the distance table if uncommented
         # self.get_logger().info("%s" % str(distances))

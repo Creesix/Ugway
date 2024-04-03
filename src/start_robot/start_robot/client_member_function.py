@@ -68,7 +68,7 @@ def main(args=None):
             start_client.send_request(strategy)
             
             # Durée d'un match
-            time.sleep(89)
+            time.sleep(20)
             msg = Bool()
             msg.data = True
             start_client.get_logger().info("Match timeout !")

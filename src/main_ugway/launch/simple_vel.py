@@ -20,9 +20,14 @@ def generate_launch_description():
             parameters=[config]
         ),
         Node(
-            package='main_ugway',
-            executable='cmd_vel_cdrf',
-            name='super_test'
+            package='start_robot',
+            executable='service',
+            name='start_service'
+        ),
+        Node(
+            package='start_robot',
+            executable='client',
+            name='client_service'
         ),
         Node(
             package='lidar_vl53l1x_processing',
